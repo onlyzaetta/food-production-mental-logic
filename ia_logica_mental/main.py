@@ -1,62 +1,44 @@
 import streamlit as st
-from motor_logico import Estado, MotorLogico
-from memoria import MemoriaDeCasos
+from motor_logico import MotorLogico
 
 st.title("Simulador de decisiones - Lógica Mental")
 
 st.subheader("Estado actual del entorno")
 
+# Inputs definidos
 agua_superficie = st.number_input("Agua en superficie (m³)", min_value=0.0, max_value=7000.0)
-precipitaciones = st.number_input("Precipitaciones anuales (m³/año)", min_value=0.0, max_value=10000.0)
+produccion_planeada = st.number_input("Producción planeada", min_value=0.0, max_value=2000.0)
 produccion_real = st.number_input("Producción real (kg/año)", min_value=0.0, max_value=2000.0)
-ganancias = st.number_input("Ganancias acumuladas ($ miles)", min_value=0.0)
-sustentabilidad = st.number_input("Índice de sustentabilidad (0 a 1)", min_value=0.0, max_value=1.0, step=0.01)
+consumo_planeado = st.number_input("Consumo planeado", min_value=0.0, max_value=9000.0)
+consumo_real = st.number_input("Consumo real", min_value=0.0, max_value=9000.0)
+indice_ganancias = st.number_input("Índice de ganancias", min_value=0.0, max_value=1.0, step=0.01)
+indice_sustentabilidad = st.number_input("Índice de sustentabilidad", min_value=0.0, max_value=1.0, step=0.01)
 
 if st.button("Enviar a IA basada en lógica mental"):
+
+    # Armar el estado como diccionario simple
     estado = {
         "agua_superficie": agua_superficie,
-        "precipitaciones": precipitaciones,
+        "consumo_planeado": consumo_planeado,
+        "consumo_real": consumo_real,
+        "produccion_planeada": produccion_planeada,
         "produccion_real": produccion_real,
-        "ganancias": ganancias,
-        "sustentabilidad": sustentabilidad
+        "indice_ganancias": indice_ganancias,
+        "indice_sustentabilidad": indice_sustentabilidad
     }
 
-    st.success("Estado registrado. Procesando con lógica mental...")
+    st.success("✅ Estado recibido. Procesando recomendación...")
 
-    # Actualizar resultado de la ronda anterior
-    memoria = MemoriaDeCasos()
-    memoria.actualizar_ultima_experiencia_con_resultado(estado)
-
-    # Iniciar motor de inferencia
+    # Procesar con motor lógico
     motor = MotorLogico()
-    motor.reset()
-
-    motor.declare(Estado(
-        agua_superficie=estado["agua_superficie"],
-        precipitaciones=estado["precipitaciones"],
-        produccion=estado["produccion_real"],
-        ganancias=estado["ganancias"],
-        sustentabilidad=estado["sustentabilidad"]
-    ))
-
-    motor.run()
+    resultado = motor.procesar_estado(estado)
 
     # Mostrar resultado
-    if motor.resultado:
-        st.subheader("💡 Recomendación:")
-        fraccion = motor.resultado.get("fraccion_bombeo", "No definida")
-        produccion = motor.resultado.get("produccion_planeada", "No definida")
-        consumo_agua = produccion * 5 if isinstance(produccion, (int, float)) else "-"
-        st.write(f"Fracción de bombeo recomendada: {fraccion}")
-        st.write(f"Producción planeada recomendada: {produccion} kg/año")
-        st.write(f"Consumo estimado de agua: {consumo_agua} m³/año")
+    st.subheader("💡 Recomendación:")
+    st.write(f"Fracción de bombeo recomendada: {resultado.get('fraccion_bombeo', 'No definida')}")
+    st.write(f"Producción planeada recomendada: {resultado.get('produccion_planeada', 'No definida')} kg/año")
+    if isinstance(resultado.get("produccion_planeada"), (int, float)):
+        consumo_estimado = resultado["produccion_planeada"] * 5
+        st.write(f"Consumo estimado de agua: {consumo_estimado} m³/año")
     else:
-        st.info("No se activó ninguna regla. Considera agregar más reglas al motor lógico.")
-
-    # Guardar experiencia (sin resultado, que se completará en la siguiente ronda)
-    memoria.guardar_experiencia(
-        entrada=estado,
-        decision=motor.resultado,
-        resultado={}  # se actualiza en la siguiente ejecución
-    )
-    st.success("📁 Experiencia registrada para futuras comparaciones.")
+        st.write("Consumo estimado de agua: -")
