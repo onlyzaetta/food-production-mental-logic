@@ -1,0 +1,18 @@
+[
+    {
+        "entrada": {
+            "agua_superficie": 1180.0,
+            "consumo_planeado": 2500.0,
+            "consumo_real": 1930.0,
+            "produccion_planeada": 499.95,
+            "produccion_real": 385.0,
+            "indice_ganancias": 0.67,
+            "indice_sustentabilidad": 0.88
+        },
+        "decision": {
+            "fraccion_bombeo": 0.5,
+            "produccion_planeada": 900
+        },
+        "resultado": {}
+    }
+]

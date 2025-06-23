@@ -42,3 +42,8 @@ if st.button("Enviar a IA basada en lógica mental"):
         st.write(f"Consumo estimado de agua: {consumo_estimado} m³/año")
     else:
         st.write("Consumo estimado de agua: -")
+
+        
+    if st.button("📊 Visualizar evolución de parámetros y resultados"):
+        import visualizar_evolucion
+        visualizar_evolucion.mostrar_graficos()
