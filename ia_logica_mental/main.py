@@ -14,22 +14,19 @@ consumo_real = st.number_input("Consumo real", min_value=0.0, max_value=9000.0)
 indice_ganancias = st.number_input("Índice de ganancias", min_value=0.0, max_value=1.0, step=0.01)
 indice_sustentabilidad = st.number_input("Índice de sustentabilidad", min_value=0.0, max_value=1.0, step=0.01)
 
-if st.button("Enviar a IA basada en lógica mental"):
+if st.button("Enviar a motor lógico"):
 
     # Armar el estado como diccionario simple
     estado = {
-        "agua_superficie": agua_superficie,
-        "consumo_planeado": consumo_planeado,
-        "consumo_real": consumo_real,
-        "produccion_planeada": produccion_planeada,
-        "produccion_real": produccion_real,
-        "indice_ganancias": indice_ganancias,
+        "agua_superficie": agua_superficie, "consumo_planeado": consumo_planeado,
+        "consumo_real": consumo_real, "produccion_planeada": produccion_planeada,
+        "produccion_real": produccion_real, "indice_ganancias": indice_ganancias,
         "indice_sustentabilidad": indice_sustentabilidad
     }
 
     st.success("✅ Estado recibido. Procesando recomendación...")
 
-    # Procesar con motor lógico
+    # Enviar a motor lógico
     motor = MotorLogico()
     resultado = motor.procesar_estado(estado)
 
@@ -43,7 +40,7 @@ if st.button("Enviar a IA basada en lógica mental"):
     else:
         st.write("Consumo estimado de agua: -")
 
-        
+
     if st.button("📊 Visualizar evolución de parámetros y resultados"):
         import visualizar_evolucion
         visualizar_evolucion.mostrar_graficos()
