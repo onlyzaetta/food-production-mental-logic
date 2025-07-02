@@ -6,13 +6,13 @@ st.title("Simulador de decisiones - Lógica Mental")
 st.subheader("Estado actual del entorno")
 
 # Inputs definidos
-agua_superficie = st.number_input("Agua en superficie (m³)", min_value=0.0, max_value=7000.0)
-produccion_planeada = st.number_input("Producción planeada", min_value=0.0, max_value=2000.0)
-produccion_real = st.number_input("Producción real (kg/año)", min_value=0.0, max_value=2000.0)
-consumo_planeado = st.number_input("Consumo planeado", min_value=0.0, max_value=9000.0)
-consumo_real = st.number_input("Consumo real", min_value=0.0, max_value=9000.0)
-indice_ganancias = st.number_input("Índice de ganancias", min_value=0.0, max_value=1.0, step=0.01)
-indice_sustentabilidad = st.number_input("Índice de sustentabilidad", min_value=0.0, max_value=1.0, step=0.01)
+agua_superficie = st.number_input("Agua en superficie (m³)", min_value=0, max_value=7000)
+produccion_planeada = st.number_input("Producción planeada", min_value=0, max_value=2000)
+produccion_real = st.number_input("Producción real (kg/año)", min_value=0, max_value=2000)
+consumo_planeado = st.number_input("Consumo planeado", min_value=0, max_value=9000)
+consumo_real = st.number_input("Consumo real", min_value=0, max_value=9000)
+indice_ganancias = st.number_input("Índice de ganancias", min_value=0, max_value=100, step=1)
+indice_sustentabilidad = st.number_input("Índice de sustentabilidad", min_value=0, max_value=100, step=1)
 
 if st.button("Enviar a motor lógico"):
 
@@ -41,6 +41,6 @@ if st.button("Enviar a motor lógico"):
         st.write("Consumo estimado de agua: -")
 
 
-    if st.button("📊 Visualizar evolución de parámetros y resultados"):
-        import visualizar_evolucion
-        visualizar_evolucion.mostrar_graficos()
+if st.button("📊 Visualizar evolución de parámetros y resultados"):
+    import visualizar_evolucion
+    visualizar_evolucion.mostrar_graficos()

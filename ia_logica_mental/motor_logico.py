@@ -27,7 +27,7 @@ class MotorLogico:
         self.resultado = dict(self.parametros["neutral"])
 
         if self.experiencias_recientes:
-            anterior = self.experiencias_recientes[-1]["entrada"]
+            anterior = self.experiencias_recientes[-1].get("valores_iniciales") or self.experiencias_recientes[-1].get("resultado")
 
             sust_actual = estado.get("indice_sustentabilidad")
             sust_prev = anterior.get("indice_sustentabilidad")
@@ -44,24 +44,33 @@ class MotorLogico:
                 if delta_sust >= 0.10:
                     print("📉 Sustentabilidad bajó más de un 10%")
                     self.resultado = dict(self.parametros["reduccion_por_sustentabilidad"])
+                else:
+                    self.resultado = dict(self.parametros["neutral"])
 
             if gan_prev and gan_prev > 0:
                 delta_gan = (gan_prev - gan_actual) / gan_prev
                 if delta_gan >= 0.10:
                     print("💸 Ganancias bajaron más de un 10%")
                     self.resultado = dict(self.parametros["reduccion_por_ganancia"])
+                else:
+                    self.resultado = dict(self.parametros["neutral"])
+                
 
             if agua_prev and agua_prev > 0:
                 delta_agua = (agua_prev - agua_actual) / agua_prev
                 if delta_agua >= 0.15:
                     print("🚱 Agua superficial bajó más de un 15%")
                     self.resultado = dict(self.parametros["ajuste_por_agua_superficie_baja"])
+                else:
+                    self.resultado = dict(self.parametros["neutral"])
 
             if consumo_prev and consumo_prev > 0:
                 delta_consumo = (consumo_actual - consumo_prev) / consumo_prev
                 if delta_consumo >= 0.10 and sust_actual < 0.7:
                     print("💧 Consumo aumentó >10% y baja sustentabilidad")
                     self.resultado = dict(self.parametros["sobreconsumo_con_sustentabilidad_baja"])
+                else:
+                    self.resultado = dict(self.parametros["neutral"])
 
         # Guardar experiencia
         self.memoria.guardar_experiencia(

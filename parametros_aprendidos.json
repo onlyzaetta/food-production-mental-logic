@@ -1,22 +1,22 @@
 {
-  "reduccion_por_sustentabilidad": {
-    "fraccion_bombeo": 0.35,
-    "produccion_planeada": 600
-  },
-  "reduccion_por_ganancia": {
-    "fraccion_bombeo": 0.40,
-    "produccion_planeada": 700
-  },
-  "ajuste_por_agua_superficie_baja": {
-    "fraccion_bombeo": 0.30,
-    "produccion_planeada": 500
-  },
-  "sobreconsumo_con_sustentabilidad_baja": {
-    "fraccion_bombeo": 0.25,
-    "produccion_planeada": 450
-  },
-  "neutral": {
-    "fraccion_bombeo": 0.50,
-    "produccion_planeada": 900
-  }
+    "reduccion_por_sustentabilidad": {
+        "fraccion_bombeo": 0.499,
+        "produccion_planeada": 899
+    },
+    "reduccion_por_ganancia": {
+        "fraccion_bombeo": 0.4,
+        "produccion_planeada": 700
+    },
+    "ajuste_por_agua_superficie_baja": {
+        "fraccion_bombeo": 0.3,
+        "produccion_planeada": 500
+    },
+    "sobreconsumo_con_sustentabilidad_baja": {
+        "fraccion_bombeo": 0.25,
+        "produccion_planeada": 450
+    },
+    "neutral": {
+        "fraccion_bombeo": 0.5,
+        "produccion_planeada": 1000
+    }
 }

@@ -12,9 +12,12 @@ class MemoriaDeCasos:
 
     def _cargar(self, archivo: Path):
         if archivo.exists():
+            if archivo.stat().st_size == 0:
+                return []
             with open(archivo, "r", encoding="utf-8") as f:
                 return json.load(f)
         return []
+
 
     def _guardar(self, archivo: Path, data):
         with open(archivo, "w", encoding="utf-8") as f:

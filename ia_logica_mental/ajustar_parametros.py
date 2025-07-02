@@ -73,7 +73,7 @@ def ajustar_parametros():
             continue
 
         valores_iniciales = juego[0].get("valores_iniciales")
-        valores_finales = juego[-1].get("valores_finales")
+        valores_finales = juego[-1].get("valores_finales") ##revisar
 
         if not valores_iniciales or not valores_finales:
             continue
@@ -81,7 +81,7 @@ def ajustar_parametros():
         eficacia = evaluar_eficacia(valores_iniciales, valores_finales)
         peso = max(0.1, eficacia + 1)
 
-        for ronda in juego[1:-1]:
+        for ronda in juego[1:-1]:#revisar
             decision = ronda.get("decision")
             resultado = ronda.get("resultado")
             if not decision or not resultado:
@@ -96,13 +96,13 @@ def ajustar_parametros():
             consumo_actual = resultado.get("consumo_real")
             consumo_prev = valores_iniciales.get("consumo_real")
 
-            if sust_prev and sust_actual is not None and (sust_prev - sust_actual) / sust_prev >= 0.10:
+            if sust_prev and sust_actual is not None and (sust_prev - sust_actual) / sust_prev <= 0.10:
                 categorias["reduccion_por_sustentabilidad"].append((decision, peso))
-            elif gan_prev and gan_actual is not None and (gan_prev - gan_actual) / gan_prev >= 0.10:
+            elif gan_prev and gan_actual is not None and (gan_prev - gan_actual) / gan_prev <= 0.10:
                 categorias["reduccion_por_ganancia"].append((decision, peso))
-            elif agua_prev and agua_actual is not None and (agua_prev - agua_actual) / agua_prev >= 0.15:
+            elif agua_prev and agua_actual is not None and (agua_prev - agua_actual) / agua_prev <= 0.15:
                 categorias["ajuste_por_agua_superficie_baja"].append((decision, peso))
-            elif consumo_prev and consumo_actual is not None and (consumo_actual - consumo_prev) / consumo_prev >= 0.10 and sust_actual < 0.7:
+            elif consumo_prev and consumo_actual is not None and (consumo_actual - consumo_prev) / consumo_prev <= 0.10 and sust_actual > 0.6:
                 categorias["sobreconsumo_con_sustentabilidad_baja"].append((decision, peso))
             else:
                 categorias["neutral"].append((decision, peso))
