@@ -3,6 +3,10 @@ import json
 from pathlib import Path
 
 class MotorLogico:
+
+    recomendacionProduccion=1000;
+    recomendacionBombeo=500;
+
     def __init__(self):
         self.resultado = {}
         self.memoria = MemoriaDeCasos()

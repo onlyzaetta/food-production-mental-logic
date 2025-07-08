@@ -330,5 +330,171 @@
             "decision": {},
             "resultado": {}
         }
+    ],
+    [
+        {
+            "valores_iniciales": {
+                "agua_superficie": 7000,
+                "consumo_planeado": 2500,
+                "consumo_real": 2500,
+                "produccion_planeada": 500,
+                "produccion_real": 500,
+                "indice_ganancias": 95,
+                "indice_sustentabilidad": 99
+            },
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {
+                "agua_superficie": 4870,
+                "consumo_planeado": 5000,
+                "consumo_real": 5000,
+                "produccion_planeada": 1000,
+                "produccion_real": 1000,
+                "indice_ganancias": 63,
+                "indice_sustentabilidad": 96
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {
+                "agua_superficie": 4180,
+                "consumo_planeado": 5000,
+                "consumo_real": 5000,
+                "produccion_planeada": 1000,
+                "produccion_real": 1000,
+                "indice_ganancias": 64,
+                "indice_sustentabilidad": 94
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {
+                "agua_superficie": 3510,
+                "consumo_planeado": 5000,
+                "consumo_real": 5000,
+                "produccion_planeada": 1000,
+                "produccion_real": 1000,
+                "indice_ganancias": 66,
+                "indice_sustentabilidad": 91
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {
+                "agua_superficie": 2840,
+                "consumo_planeado": 5000,
+                "consumo_real": 5000,
+                "produccion_planeada": 1000,
+                "produccion_real": 1000,
+                "indice_ganancias": 68,
+                "indice_sustentabilidad": 89
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {
+                "agua_superficie": 2320,
+                "consumo_planeado": 5000,
+                "consumo_real": 4820,
+                "produccion_planeada": 1000,
+                "produccion_real": 967,
+                "indice_ganancias": 70,
+                "indice_sustentabilidad": 86
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {
+                "agua_superficie": 2030,
+                "consumo_planeado": 5000,
+                "consumo_real": 4530,
+                "produccion_planeada": 1000,
+                "produccion_real": 909,
+                "indice_ganancias": 72,
+                "indice_sustentabilidad": 83
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {
+                "agua_superficie": 1750,
+                "consumo_planeado": 5000,
+                "consumo_real": 4250,
+                "produccion_planeada": 1000,
+                "produccion_real": 852,
+                "indice_ganancias": 74,
+                "indice_sustentabilidad": 80
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {
+                "agua_superficie": 1460,
+                "consumo_planeado": 5000,
+                "consumo_real": 3960,
+                "produccion_planeada": 1000,
+                "produccion_real": 795,
+                "indice_ganancias": 75,
+                "indice_sustentabilidad": 77
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {
+                "agua_superficie": 1180,
+                "consumo_planeado": 5000,
+                "consumo_real": 3680,
+                "produccion_planeada": 1000,
+                "produccion_real": 735,
+                "indice_ganancias": 76,
+                "indice_sustentabilidad": 74
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 0.5,
+                "produccion_planeada": 1000
+            },
+            "resultado": {}
+        },
+        {
+            "valores_finales": {
+                "agua_superficie": 1180,
+                "consumo_planeado": 5000,
+                "consumo_real": 3680,
+                "produccion_planeada": 1000,
+                "produccion_real": 735,
+                "indice_ganancias": 76,
+                "indice_sustentabilidad": 74
+            },
+            "decision": {},
+            "resultado": {}
+        }
     ]
 ]
