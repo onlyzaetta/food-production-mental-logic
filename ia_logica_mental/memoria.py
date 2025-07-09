@@ -18,7 +18,6 @@ class MemoriaDeCasos:
                 return json.load(f)
         return []
 
-
     def _guardar(self, archivo: Path, data):
         with open(archivo, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4)
@@ -26,38 +25,38 @@ class MemoriaDeCasos:
     def guardar_experiencia(self, entrada: dict, decision: dict, resultado: dict):
         ronda_n = len(self.experiencias_actual)
 
+        condiciones = decision.get("condiciones_aplicadas", [])
+
         if ronda_n == 0:
-            # Primera ronda: guardar como valores iniciales y decisión
             experiencia = {
                 "valores_iniciales": entrada,
                 "decision": decision,
+                "condiciones_aplicadas": condiciones,
                 "resultado": {}
             }
         elif ronda_n == 10:
-            # Ronda final: entrada se guarda como resultado final
             self.experiencias_actual.append({
                 "valores_finales": entrada,
-                "decision": {},  # no hay recomendación en esta ronda
+                "decision": {},
+                "condiciones_aplicadas": [],
                 "resultado": {}
             })
             self._guardar(self.archivo_actual, self.experiencias_actual)
             self._archivar_juego()
             return
         else:
-            # Rondas intermedias: guardar decisión y resultado (resultado se rellena al siguiente ciclo)
             experiencia = {
                 "decision": decision,
-                "resultado": {}  # se rellena en la siguiente ronda
+                "condiciones_aplicadas": condiciones,
+                "resultado": {}
             }
 
         self.experiencias_actual.append(experiencia)
         self._guardar(self.archivo_actual, self.experiencias_actual)
 
-        # A partir de la segunda ronda, rellenamos el resultado de la anterior
         if ronda_n >= 1:
             self.experiencias_actual[-2]["resultado"] = entrada
             self._guardar(self.archivo_actual, self.experiencias_actual)
-
 
     def actualizar_ultima_experiencia_con_resultado(self, resultado: dict):
         if self.experiencias_actual:
@@ -74,6 +73,5 @@ class MemoriaDeCasos:
             self.experiencias_actual = []
             self._guardar(self.archivo_actual, self.experiencias_actual)
 
-            # Ajustar los parámetros después de guardar un juego completo
             from ajustar_parametros import ajustar_parametros
             ajustar_parametros()

@@ -4,79 +4,80 @@ from pathlib import Path
 
 class MotorLogico:
 
-    recomendacionProduccion=1000;
-    recomendacionBombeo=500;
-
     def __init__(self):
         self.resultado = {}
         self.memoria = MemoriaDeCasos()
         self.experiencias_recientes = self.memoria.obtener_ultimas_rondas()
         self.parametros = self._cargar_parametros_aprendidos()
+        self.recomendacionBombeo = 500
+        self.recomendacionProduccion = 1000
 
     def _cargar_parametros_aprendidos(self):
-        ruta = Path("parametros_aprendidos.json")
+        ruta = Path("parametros_ajustados.json")
         if ruta.exists():
             with open(ruta, "r") as f:
                 return json.load(f)
         return {
-            "reduccion_por_sustentabilidad": {"fraccion_bombeo": 0.35, "produccion_planeada": 600},
-            "reduccion_por_ganancia": {"fraccion_bombeo": 0.4, "produccion_planeada": 700},
-            "ajuste_por_agua_superficie_baja": {"fraccion_bombeo": 0.3, "produccion_planeada": 500},
-            "sobreconsumo_con_sustentabilidad_baja": {"fraccion_bombeo": 0.25, "produccion_planeada": 450},
-            "neutral": {"fraccion_bombeo": 0.5, "produccion_planeada": 900}
+            "reduccion_produccion_por_capacidad_produccion": 100,
+            "reduccion_produccion_por_capacidad_consumo": 100,
+            "aumento_por_bajo_indice_ganancia": 100,
+            "reduccion_por_bajo_indice_susten": 100,
+            "reduccion_por_sobre_consumo": 100
         }
 
     def procesar_estado(self, estado: dict) -> dict:
-        # Por defecto, aplicar parámetros neutrales
-        self.resultado = dict(self.parametros["neutral"])
+        condiciones_aplicadas = []
+
+        # Valores base
+        self.recomendacionBombeo = 500
+        self.recomendacionProduccion = 1000
 
         if self.experiencias_recientes:
-            anterior = self.experiencias_recientes[-1].get("valores_iniciales") or self.experiencias_recientes[-1].get("resultado")
+            anterior = self.experiencias_recientes[-1].get("valores_iniciales") or \
+                       self.experiencias_recientes[-1].get("resultado")
 
+            prod_plan_actual = estado.get("produccion_planeada")
+            prod_real_actual = estado.get("produccion_real")
             sust_actual = estado.get("indice_sustentabilidad")
             sust_prev = anterior.get("indice_sustentabilidad")
             gan_actual = estado.get("indice_ganancias")
             gan_prev = anterior.get("indice_ganancias")
             agua_actual = estado.get("agua_superficie")
             agua_prev = anterior.get("agua_superficie")
-            consumo_actual = estado.get("consumo_real")
-            consumo_prev = anterior.get("consumo_real")
+            consumo_agua_planeado = estado.get("consumo_planeado")
+            consumo_agua_real = estado.get("consumo_real")
 
-            # Detectar situación y aplicar parámetros aprendidos
-            if sust_prev and sust_prev > 0:
-                delta_sust = (sust_prev - sust_actual) / sust_prev
-                if delta_sust >= 0.10:
-                    print("📉 Sustentabilidad bajó más de un 10%")
-                    self.resultado = dict(self.parametros["reduccion_por_sustentabilidad"])
-                else:
-                    self.resultado = dict(self.parametros["neutral"])
+            # -producción planeada (PP) - producción real (PR) > 0
+            if prod_plan_actual is not None and prod_real_actual is not None and (prod_plan_actual - prod_real_actual > 0):
+                self.recomendacionProduccion -= self.parametros["reduccion_produccion_por_capacidad_produccion"]
+                condiciones_aplicadas.append("reduccion_por_capacidad_produccion")
+            # -consumo planeado (CP) - consumo real (CR) > 0
+            if consumo_agua_planeado is not None and consumo_agua_real is not None and (consumo_agua_planeado - consumo_agua_real > 0):
+                self.recomendacionProduccion -= self.parametros["reduccion_produccion_por_capacidad_consumo"]
+                condiciones_aplicadas.append("reduccion_por_capacidad_consumo")
+            # -índice de ganancias disminuye más de un 5%
+            if gan_prev is not None and gan_actual is not None and (gan_prev - gan_actual > 5):
+                self.recomendacionBombeo += self.parametros["aumento_por_bajo_indice_ganancia"]
+                self.recomendacionProduccion += self.parametros["aumento_por_bajo_indice_ganancia"] * 5
+                condiciones_aplicadas.append("aumento_por_bajo_indice_ganancia")
+            # -índice de sustentabilidad disminuye más de un 5%
+            if sust_prev is not None and sust_actual is not None and (sust_prev - sust_actual > 5):
+                self.recomendacionBombeo -= self.parametros["reduccion_por_bajo_indice_susten"]
+                self.recomendacionProduccion -= self.parametros["reduccion_por_bajo_indice_susten"] * 5
+                condiciones_aplicadas.append("reduccion_por_bajo_indice_susten")
+            # -Agua en superficie disminuye más de un 15%
+            if agua_prev is not None and agua_actual is not None and (agua_prev - agua_actual > 0.15 * agua_prev):
+                self.recomendacionBombeo -= self.parametros["reduccion_por_sobre_consumo"]
+                condiciones_aplicadas.append("reduccion_por_sobre_consumo")
 
-            if gan_prev and gan_prev > 0:
-                delta_gan = (gan_prev - gan_actual) / gan_prev
-                if delta_gan >= 0.10:
-                    print("💸 Ganancias bajaron más de un 10%")
-                    self.resultado = dict(self.parametros["reduccion_por_ganancia"])
-                else:
-                    self.resultado = dict(self.parametros["neutral"])
-                
+        # Resultado final de la ronda
+        self.resultado = {
+            "fraccion_bombeo": self.recomendacionBombeo,
+            "produccion_planeada": self.recomendacionProduccion,
+            "condiciones_aplicadas": condiciones_aplicadas
+        }
 
-            if agua_prev and agua_prev > 0:
-                delta_agua = (agua_prev - agua_actual) / agua_prev
-                if delta_agua >= 0.15:
-                    print("🚱 Agua superficial bajó más de un 15%")
-                    self.resultado = dict(self.parametros["ajuste_por_agua_superficie_baja"])
-                else:
-                    self.resultado = dict(self.parametros["neutral"])
-
-            if consumo_prev and consumo_prev > 0:
-                delta_consumo = (consumo_actual - consumo_prev) / consumo_prev
-                if delta_consumo >= 0.10 and sust_actual < 0.7:
-                    print("💧 Consumo aumentó >10% y baja sustentabilidad")
-                    self.resultado = dict(self.parametros["sobreconsumo_con_sustentabilidad_baja"])
-                else:
-                    self.resultado = dict(self.parametros["neutral"])
-
-        # Guardar experiencia
+        # Guardar experiencia con condiciones
         self.memoria.guardar_experiencia(
             entrada=estado,
             decision=self.resultado,

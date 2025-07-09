@@ -16,30 +16,37 @@ indice_sustentabilidad = st.number_input("Índice de sustentabilidad", min_value
 
 if st.button("Enviar a motor lógico"):
 
-    # Armar el estado como diccionario simple
     estado = {
-        "agua_superficie": agua_superficie, "consumo_planeado": consumo_planeado,
-        "consumo_real": consumo_real, "produccion_planeada": produccion_planeada,
-        "produccion_real": produccion_real, "indice_ganancias": indice_ganancias,
+        "agua_superficie": agua_superficie,
+        "consumo_planeado": consumo_planeado,
+        "consumo_real": consumo_real,
+        "produccion_planeada": produccion_planeada,
+        "produccion_real": produccion_real,
+        "indice_ganancias": indice_ganancias,
         "indice_sustentabilidad": indice_sustentabilidad
     }
 
     st.success("✅ Estado recibido. Procesando recomendación...")
 
-    # Enviar a motor lógico
     motor = MotorLogico()
     resultado = motor.procesar_estado(estado)
 
-    # Mostrar resultado
     st.subheader("💡 Recomendación:")
     st.write(f"Fracción de bombeo recomendada: {resultado.get('fraccion_bombeo', 'No definida')}")
     st.write(f"Producción planeada recomendada: {resultado.get('produccion_planeada', 'No definida')} kg/año")
+
     if isinstance(resultado.get("produccion_planeada"), (int, float)):
         consumo_estimado = resultado["produccion_planeada"] * 5
         st.write(f"Consumo estimado de agua: {consumo_estimado} m³/año")
     else:
         st.write("Consumo estimado de agua: -")
 
+    # Mostrar razones (condiciones aplicadas)
+    condiciones = resultado.get("condiciones_aplicadas", [])
+    if condiciones:
+        st.markdown("### 🤔 Razón(es) de la recomendación:")
+        for condicion in condiciones:
+            st.write(f"• {condicion}")
 
 if st.button("📊 Visualizar evolución de parámetros y resultados"):
     import visualizar_evolucion

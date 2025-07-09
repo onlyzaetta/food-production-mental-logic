@@ -1,32 +1,19 @@
 import json
 from pathlib import Path
 
-PARAMS_FILE = Path("parametros_aprendidos.json")
+PARAMS_FILE = Path("parametros_ajustados.json")
 HISTORIAL_FILE = Path("experiencias_historial.json")
+
 
 def get_parametros_default():
     return {
-        "reduccion_por_sustentabilidad": {
-            "fraccion_bombeo": 0.35,
-            "produccion_planeada": 600
-        },
-        "reduccion_por_ganancia": {
-            "fraccion_bombeo": 0.40,
-            "produccion_planeada": 700
-        },
-        "ajuste_por_agua_superficie_baja": {
-            "fraccion_bombeo": 0.30,
-            "produccion_planeada": 500
-        },
-        "sobreconsumo_con_sustentabilidad_baja": {
-            "fraccion_bombeo": 0.25,
-            "produccion_planeada": 450
-        },
-        "neutral": {
-            "fraccion_bombeo": 0.50,
-            "produccion_planeada": 900
-        }
+        "reduccion_por_capacidad_produccion": 100,
+        "reduccion_por_capacidad_consumo": 100,
+        "aumento_por_bajo_indice_ganancia": 100,
+        "reduccion_por_bajo_indice_susten": 100,
+        "reduccion_por_sobre_consumo": 100
     }
+
 
 def cargar_parametros():
     if PARAMS_FILE.exists():
@@ -34,9 +21,11 @@ def cargar_parametros():
             return json.load(f)
     return get_parametros_default()
 
+
 def guardar_parametros(parametros):
     with open(PARAMS_FILE, 'w') as f:
         json.dump(parametros, f, indent=4)
+
 
 def evaluar_eficacia(valores_iniciales, valores_finales):
     sust_ini = valores_iniciales.get("indice_sustentabilidad")
@@ -52,6 +41,7 @@ def evaluar_eficacia(valores_iniciales, valores_finales):
 
     return score
 
+
 def ajustar_parametros():
     if not HISTORIAL_FILE.exists():
         print("No hay historial para ajustar parámetros.")
@@ -61,11 +51,11 @@ def ajustar_parametros():
         juegos = json.load(f)
 
     categorias = {
-        "reduccion_por_sustentabilidad": [],
-        "reduccion_por_ganancia": [],
-        "ajuste_por_agua_superficie_baja": [],
-        "sobreconsumo_con_sustentabilidad_baja": [],
-        "neutral": []
+        "reduccion_por_capacidad_produccion": [],
+        "reduccion_por_capacidad_consumo": [],
+        "aumento_por_bajo_indice_ganancia": [],
+        "reduccion_por_bajo_indice_susten": [],
+        "reduccion_por_sobre_consumo": []
     }
 
     for juego in juegos:
@@ -73,7 +63,7 @@ def ajustar_parametros():
             continue
 
         valores_iniciales = juego[0].get("valores_iniciales")
-        valores_finales = juego[-1].get("valores_finales") ##revisar
+        valores_finales = juego[-1].get("valores_finales")
 
         if not valores_iniciales or not valores_finales:
             continue
@@ -81,46 +71,43 @@ def ajustar_parametros():
         eficacia = evaluar_eficacia(valores_iniciales, valores_finales)
         peso = max(0.1, eficacia + 1)
 
-        for ronda in juego[1:-1]:#revisar
+        for ronda in juego[1:-1]:
             decision = ronda.get("decision")
             resultado = ronda.get("resultado")
             if not decision or not resultado:
                 continue
 
-            sust_actual = resultado.get("indice_sustentabilidad")
-            sust_prev = valores_iniciales.get("indice_sustentabilidad")
-            gan_actual = resultado.get("indice_ganancias")
+            prod_plan = resultado.get("produccion_planeada")
+            prod_real = resultado.get("produccion_real")
+            consumo_plan = resultado.get("consumo_planeado")
+            consumo_real = resultado.get("consumo_real")
             gan_prev = valores_iniciales.get("indice_ganancias")
-            agua_actual = resultado.get("agua_superficie")
+            gan_actual = resultado.get("indice_ganancias")
+            sust_prev = valores_iniciales.get("indice_sustentabilidad")
+            sust_actual = resultado.get("indice_sustentabilidad")
             agua_prev = valores_iniciales.get("agua_superficie")
-            consumo_actual = resultado.get("consumo_real")
-            consumo_prev = valores_iniciales.get("consumo_real")
+            agua_actual = resultado.get("agua_superficie")
 
-            if sust_prev and sust_actual is not None and (sust_prev - sust_actual) / sust_prev <= 0.10:
-                categorias["reduccion_por_sustentabilidad"].append((decision, peso))
-            elif gan_prev and gan_actual is not None and (gan_prev - gan_actual) / gan_prev <= 0.10:
-                categorias["reduccion_por_ganancia"].append((decision, peso))
-            elif agua_prev and agua_actual is not None and (agua_prev - agua_actual) / agua_prev <= 0.15:
-                categorias["ajuste_por_agua_superficie_baja"].append((decision, peso))
-            elif consumo_prev and consumo_actual is not None and (consumo_actual - consumo_prev) / consumo_prev <= 0.10 and sust_actual > 0.6:
-                categorias["sobreconsumo_con_sustentabilidad_baja"].append((decision, peso))
-            else:
-                categorias["neutral"].append((decision, peso))
+            if prod_plan is not None and prod_real is not None and (prod_plan - prod_real) > 0:
+                categorias["reduccion_por_capacidad_produccion"].append((100, peso))
+            if consumo_plan is not None and consumo_real is not None and (consumo_plan - consumo_real) > 0:
+                categorias["reduccion_por_capacidad_consumo"].append((100, peso))
+            if gan_prev is not None and gan_actual is not None and (gan_prev - gan_actual) > 5:
+                categorias["aumento_por_bajo_indice_ganancia"].append((100, peso))
+            if sust_prev is not None and sust_actual is not None and (sust_prev - sust_actual) > 5:
+                categorias["reduccion_por_bajo_indice_susten"].append((100, peso))
+            if agua_prev is not None and agua_actual is not None and (agua_prev - agua_actual) > (0.15 * agua_prev):
+                categorias["reduccion_por_sobre_consumo"].append((100, peso))
 
     nuevos_parametros = {}
-    for key, decisiones in categorias.items():
-        if not decisiones:
+    for key, ajustes in categorias.items():
+        if not ajustes:
             nuevos_parametros[key] = get_parametros_default()[key]
             continue
 
-        total_bombeo = sum(d["fraccion_bombeo"] * p for d, p in decisiones)
-        total_produccion = sum(d["produccion_planeada"] * p for d, p in decisiones)
-        total_peso = sum(p for _, p in decisiones)
-
-        nuevos_parametros[key] = {
-            "fraccion_bombeo": round(total_bombeo / total_peso, 3),
-            "produccion_planeada": round(total_produccion / total_peso)
-        }
+        total_ponderado = sum(valor * peso for valor, peso in ajustes)
+        total_pesos = sum(peso for _, peso in ajustes)
+        nuevos_parametros[key] = round(total_ponderado / total_pesos)
 
     guardar_parametros(nuevos_parametros)
     print("🔄 Parámetros ajustados:", nuevos_parametros)
