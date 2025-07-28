@@ -6,7 +6,7 @@ st.title("Simulador de decisiones - Lógica Mental")
 st.subheader("Estado actual del entorno")
 
 # Inputs definidos
-##Agua y consumo
+# Agua y consumo
 agua_superficie = st.number_input("Agua en superficie (m³)", min_value=0, max_value=7000)
 precipitaciones = st.number_input(" Precipitaciones", min_value=2000, max_value=7000)
 reservas = st.number_input("Total estimado de reservas", min_value=1000, max_value=360000, step=1000)
@@ -71,18 +71,6 @@ if st.button("Enviar a motor lógico"):
                 st.write(f"• {condicion}")
 
 
-    if isinstance(resultado.get("produccion_planeada"), (int, float)):
-        consumo_estimado = resultado["produccion_planeada"] * 5
-        st.write(f"Consumo estimado de agua: {consumo_estimado} m³/año")
-    else:
-        st.write("Consumo estimado de agua: -")
-
-    # Mostrar razones (condiciones aplicadas)
-    condiciones = resultado.get("razon_recomendacion", [])
-    if condiciones:
-        st.markdown("### 🤔 Razón(es) de la recomendación:")
-        for condicion in condiciones:
-            st.write(f"• {condicion}")
 
 if st.button("📊 Visualizar evolución de parámetros y resultados"):
     import visualizar_evolucion

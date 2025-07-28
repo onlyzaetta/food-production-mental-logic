@@ -37,8 +37,8 @@ def mostrar_graficos():
     st.subheader("📈 Evolución ronda a ronda")
     fig, ax = plt.subplots(figsize=(10, 5))
 
-    ax.plot(x, sust, label="Índice de Sustentabilidad", color="green", marker="o")
-    ax.plot(x, gan, label="Índice de Ganancias", color="orange", marker="s")
+    ax.plot(x, sust, label="Índice de Sustentabilidad", color="green", linestyle="--")
+    ax.plot(x, gan, label="Índice de Ganancias", color="orange", linestyle="--")
     ax.plot(x, bombeo, label="Fracción de Bombeo", color="blue", linestyle="--")
     ax.plot(x, produccion, label="Producción Planeada", color="purple", linestyle="--")
 

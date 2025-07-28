@@ -72,7 +72,7 @@ def ajustar_parametros():
                 # Si la produccion y las ganancias ahumentaron y la sustentabilidad no bajó demaciado
                 if cambio_en_produccion > 0 and cambio_en_ganancias > 0 and cambio_en_sustentabilidad > -10:
                     acumuladores[condicion].append(1)
-                # Si la produccion o la sustentabilidad bajan
+                # Si la produccion o la sustentabilidad bajan   
                 elif cambio_en_produccion < 0 or cambio_en_sustentabilidad < 0:
                     acumuladores[condicion].append(-1)
                 # neutro
