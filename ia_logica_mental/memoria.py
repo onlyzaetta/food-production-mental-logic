@@ -24,7 +24,6 @@ class MemoriaDeCasos:
 
     def guardar_experiencia(self, entrada: dict, decision: dict, resultado: dict):
         ronda_n = len(self.experiencias_actual)
-
         condiciones = decision.get("condiciones_aplicadas", [])
 
         if ronda_n == 0:
@@ -34,29 +33,27 @@ class MemoriaDeCasos:
                 "condiciones_aplicadas": condiciones,
                 "resultado": {}
             }
-        elif ronda_n == 10:
-            self.experiencias_actual.append({
-                "valores_finales": entrada,
-                "decision": {},
-                "condiciones_aplicadas": [],
-                "resultado": {}
-            })
-            self._guardar(self.archivo_actual, self.experiencias_actual)
-            self._archivar_juego()
-            return
-        else:
+            self.experiencias_actual.append(experiencia)
+
+        elif ronda_n < 10:
             experiencia = {
                 "decision": decision,
                 "condiciones_aplicadas": condiciones,
                 "resultado": {}
             }
+            self.experiencias_actual.append(experiencia)
+            self.experiencias_actual[-2]["resultado"] = entrada  # Guardar resultado de ronda anterior
 
-        self.experiencias_actual.append(experiencia)
+        elif ronda_n == 10:
+            # Guardar como resultado de la última ronda real
+            self.experiencias_actual[-1]["resultado"] = entrada
+            self._guardar(self.archivo_actual, self.experiencias_actual)
+            self._archivar_juego()
+            return
+
         self._guardar(self.archivo_actual, self.experiencias_actual)
 
-        if ronda_n >= 1:
-            self.experiencias_actual[-2]["resultado"] = entrada
-            self._guardar(self.archivo_actual, self.experiencias_actual)
+
 
     def actualizar_ultima_experiencia_con_resultado(self, resultado: dict):
         if self.experiencias_actual:

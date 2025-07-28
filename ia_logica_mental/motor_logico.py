@@ -17,64 +17,113 @@ class MotorLogico:
         if ruta.exists():
             with open(ruta, "r") as f:
                 return json.load(f)
+        ## Valores por defecto en caso de fallo al buscar y leer archivo
         return {
             "reduccion_produccion_por_capacidad_produccion": 100,
             "reduccion_produccion_por_capacidad_consumo": 100,
             "aumento_por_bajo_indice_ganancia": 100,
             "reduccion_por_bajo_indice_susten": 100,
-            "reduccion_por_sobre_consumo": 100
+            "reduccion_por_sobre_consumo": 100,
+            "aumento_por_bajas_precipitaciones": 100,
+            "reduccion_por_bajas_reservas": 100,
+            "aumento_por_altas_ganancias": 100
         }
 
     def procesar_estado(self, estado: dict) -> dict:
         condiciones_aplicadas = []
+        razon_recomendacion = []
+
+        # Si ya hay 10 rondas, solo se espera el resultado final
+        if len(self.experiencias_recientes) == 10:
+            self.memoria.guardar_experiencia(
+                entrada=estado, decision={}, resultado={}
+            )
+            return {
+                "mensaje": "La simulación ha sido almacenada en memoria para su análisis"
+            }
+
 
         # Valores base
-        self.recomendacionBombeo = 500
-        self.recomendacionProduccion = 1000
+        self.recomendacionBombeo = 50
+        self.recomendacionProduccion = 500
 
         if self.experiencias_recientes:
             anterior = self.experiencias_recientes[-1].get("valores_iniciales") or \
                        self.experiencias_recientes[-1].get("resultado")
 
+            sust_prev = anterior.get("indice_sustentabilidad")
+            gan_prev = anterior.get("indice_ganancias")
+            agua_prev = anterior.get("agua_superficie")
+            precipitaciones_prev = anterior.get("precipitaciones")            
+            reservas_prev = anterior.get("reservas")
+            gan_previas = anterior.get("ganancias_anuales")
+
             prod_plan_actual = estado.get("produccion_planeada")
             prod_real_actual = estado.get("produccion_real")
             sust_actual = estado.get("indice_sustentabilidad")
-            sust_prev = anterior.get("indice_sustentabilidad")
             gan_actual = estado.get("indice_ganancias")
-            gan_prev = anterior.get("indice_ganancias")
             agua_actual = estado.get("agua_superficie")
-            agua_prev = anterior.get("agua_superficie")
-            consumo_agua_planeado = estado.get("consumo_planeado")
-            consumo_agua_real = estado.get("consumo_real")
+            bombeo_agua_planeado = estado.get("bombeo_planeado")
+            bombeo_agua_real = estado.get("bombeo_real")
+            precipitaciones_actual = estado.get("precipitaciones")
+            reservas_actual = estado.get("reservas")
+            gan_actuales = estado.get("ganancias_anuales")
+
 
             # -producción planeada (PP) - producción real (PR) > 0
             if prod_plan_actual is not None and prod_real_actual is not None and (prod_plan_actual - prod_real_actual > 0):
-                self.recomendacionProduccion -= self.parametros["reduccion_produccion_por_capacidad_produccion"]
+                self.recomendacionProduccion -= self.parametros["reduccion_por_capacidad_produccion"]
                 condiciones_aplicadas.append("reduccion_por_capacidad_produccion")
+                razon_recomendacion.append("Reducir la producción por que se sobrepasó la capacidad de produccion del terreno")
             # -consumo planeado (CP) - consumo real (CR) > 0
-            if consumo_agua_planeado is not None and consumo_agua_real is not None and (consumo_agua_planeado - consumo_agua_real > 0):
-                self.recomendacionProduccion -= self.parametros["reduccion_produccion_por_capacidad_consumo"]
+            if bombeo_agua_planeado is not None and bombeo_agua_real is not None and (bombeo_agua_planeado - bombeo_agua_real > 0):
+                self.recomendacionProduccion -= self.parametros["reduccion_por_capacidad_consumo"]
                 condiciones_aplicadas.append("reduccion_por_capacidad_consumo")
+                razon_recomendacion.append("Reducir la producción por que se sobrepasó la capacidad de consumo de agua del terreno")
             # -índice de ganancias disminuye más de un 5%
             if gan_prev is not None and gan_actual is not None and (gan_prev - gan_actual > 5):
-                self.recomendacionBombeo += self.parametros["aumento_por_bajo_indice_ganancia"]
-                self.recomendacionProduccion += self.parametros["aumento_por_bajo_indice_ganancia"] * 5
+                self.recomendacionBombeo += self.parametros["aumento_por_bajo_indice_ganancia"] /2
+                self.recomendacionProduccion += self.parametros["aumento_por_bajo_indice_ganancia"]
                 condiciones_aplicadas.append("aumento_por_bajo_indice_ganancia")
+                razon_recomendacion.append("Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion")
             # -índice de sustentabilidad disminuye más de un 5%
             if sust_prev is not None and sust_actual is not None and (sust_prev - sust_actual > 5):
-                self.recomendacionBombeo -= self.parametros["reduccion_por_bajo_indice_susten"]
-                self.recomendacionProduccion -= self.parametros["reduccion_por_bajo_indice_susten"] * 5
+                self.recomendacionBombeo -= self.parametros["reduccion_por_bajo_indice_susten"] /2
+                self.recomendacionProduccion -= self.parametros["reduccion_por_bajo_indice_susten"]
                 condiciones_aplicadas.append("reduccion_por_bajo_indice_susten")
+                razon_recomendacion.append("Reducir la producción por bajada excesiva del índice de sustentabilidad")
             # -Agua en superficie disminuye más de un 15%
             if agua_prev is not None and agua_actual is not None and (agua_prev - agua_actual > 0.15 * agua_prev):
-                self.recomendacionBombeo -= self.parametros["reduccion_por_sobre_consumo"]
+                self.recomendacionBombeo -= self.parametros["reduccion_por_sobre_consumo"] /10
                 condiciones_aplicadas.append("reduccion_por_sobre_consumo")
+                razon_recomendacion.append("Reducir la producción debido al sobre consumo del agua en superficie")
+            
+            # 📉 Baja de precipitaciones mayor al 5%
+            if precipitaciones_actual is not None and precipitaciones_prev is not None:
+                if precipitaciones_prev > 0 and (precipitaciones_prev - precipitaciones_actual) / precipitaciones_prev > 0.05:
+                    self.recomendacionBombeo += self.parametros.get("aumento_por_bajas_precipitaciones", 100) / 10
+                    condiciones_aplicadas.append("aumento_por_bajas_precipitaciones")
+                    razon_recomendacion.append("Aumento de bombeo por baja significativa en precipitaciones")
+            # 📉 Reservas bajan más de un 5%
+            if reservas_actual is not None and reservas_prev is not None:
+                if reservas_prev > 0 and (reservas_prev - reservas_actual) / reservas_prev > 0.05:
+                    self.recomendacionBombeo -= self.parametros.get("reduccion_por_bajas_reservas", 100) / 10
+                    condiciones_aplicadas.append("reduccion_por_bajas_reservas")
+                    razon_recomendacion.append("Reducción de bombeo por baja significativa en reservas disponibles")
+            # 📈 Aumento de ganancias anuales mayor al 5%
+            if gan_actuales is not None and gan_previas is not None:
+                if gan_previas > 0 and (gan_actuales - gan_previas) / gan_previas > 0.05:
+                    self.recomendacionProduccion += self.parametros.get("aumento_por_altas_ganancias", 100) / 10
+                    condiciones_aplicadas.append("aumento_por_altas_ganancias")
+                    razon_recomendacion.append("Aumento de producción debido a mejora significativa en ganancias anuales")
+
 
         # Resultado final de la ronda
         self.resultado = {
             "fraccion_bombeo": self.recomendacionBombeo,
             "produccion_planeada": self.recomendacionProduccion,
-            "condiciones_aplicadas": condiciones_aplicadas
+            "condiciones_aplicadas": condiciones_aplicadas,
+            "razon_recomendacion": razon_recomendacion
         }
 
         # Guardar experiencia con condiciones

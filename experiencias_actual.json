@@ -1,1 +1,29 @@
-[]
+[
+    {
+        "valores_iniciales": {
+            "agua_superficie": 7000,
+            "precipitaciones": 6500,
+            "reservas": 353000,
+            "consumo_planeado": 2500,
+            "consumo_real": 2500,
+            "bombeo_planeado": 1250,
+            "bombeo_real": 1250,
+            "produccion_planeada": 500,
+            "produccion_real": 500,
+            "produccion_acumulada": 12000,
+            "ganancias_anuales": 2380,
+            "ganancias_acumuladas": 57000,
+            "indice_ganancias": 69,
+            "indice_sustentabilidad": 98,
+            "indice_rendimiento": 84
+        },
+        "decision": {
+            "fraccion_bombeo": 50,
+            "produccion_planeada": 500,
+            "condiciones_aplicadas": [],
+            "razon_recomendacion": []
+        },
+        "condiciones_aplicadas": [],
+        "resultado": {}
+    }
+]

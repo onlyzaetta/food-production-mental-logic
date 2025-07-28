@@ -4,16 +4,17 @@ from pathlib import Path
 PARAMS_FILE = Path("parametros_ajustados.json")
 HISTORIAL_FILE = Path("experiencias_historial.json")
 
-
 def get_parametros_default():
     return {
         "reduccion_por_capacidad_produccion": 100,
         "reduccion_por_capacidad_consumo": 100,
         "aumento_por_bajo_indice_ganancia": 100,
         "reduccion_por_bajo_indice_susten": 100,
-        "reduccion_por_sobre_consumo": 100
+        "reduccion_por_sobre_consumo": 100,
+        "aumento_por_bajas_precipitaciones": 100,
+        "reduccion_por_bajas_reservas": 100,
+        "aumento_por_altas_ganancias": 100
     }
-
 
 def cargar_parametros():
     if PARAMS_FILE.exists():
@@ -21,93 +22,75 @@ def cargar_parametros():
             return json.load(f)
     return get_parametros_default()
 
-
 def guardar_parametros(parametros):
     with open(PARAMS_FILE, 'w') as f:
         json.dump(parametros, f, indent=4)
 
-
-def evaluar_eficacia(valores_iniciales, valores_finales):
-    sust_ini = valores_iniciales.get("indice_sustentabilidad")
-    sust_fin = valores_finales.get("indice_sustentabilidad")
-    gan_ini = valores_iniciales.get("indice_ganancias")
-    gan_fin = valores_finales.get("indice_ganancias")
-
-    score = 0
-    if sust_ini is not None and sust_fin is not None:
-        score += (sust_fin - sust_ini)
-    if gan_ini is not None and gan_fin is not None:
-        score += (gan_fin - gan_ini)
-
-    return score
-
-
 def ajustar_parametros():
     if not HISTORIAL_FILE.exists():
-        print("No hay historial para ajustar parámetros.")
+        print("⚠️ No hay historial para ajustar parámetros.")
         return
 
-    with open(HISTORIAL_FILE, 'r') as f:
+    with open(HISTORIAL_FILE, 'r', encoding='utf-8') as f:
         juegos = json.load(f)
 
-    categorias = {
-        "reduccion_por_capacidad_produccion": [],
-        "reduccion_por_capacidad_consumo": [],
-        "aumento_por_bajo_indice_ganancia": [],
-        "reduccion_por_bajo_indice_susten": [],
-        "reduccion_por_sobre_consumo": []
-    }
+    acumuladores = {clave: [] for clave in get_parametros_default()}
 
     for juego in juegos:
-        if not juego:
+        if not juego or len(juego) < 3:
             continue
 
-        valores_iniciales = juego[0].get("valores_iniciales")
-        valores_finales = juego[-1].get("valores_finales")
+        for i in range(2, len(juego)-1):
+            actual = juego[i]
+            anterior = juego[i-1]
 
-        if not valores_iniciales or not valores_finales:
-            continue
+            condiciones = actual.get("condiciones_aplicadas", [])
+            resultado_actual = actual.get("resultado", {})
+            resultado_anterior = anterior.get("resultado", {})
 
-        eficacia = evaluar_eficacia(valores_iniciales, valores_finales)
-        peso = max(0.1, eficacia + 1)
+            gan_ant = resultado_anterior.get("indice_ganancias")
+            sust_ant = resultado_anterior.get("indice_sustentabilidad")
+            prod_ant = resultado_anterior.get("produccion_real")
+            
+            gan_act = resultado_actual.get("indice_ganancias")
+            sust_act = resultado_actual.get("indice_sustentabilidad")
+            prod_act = resultado_actual.get("produccion_real")
 
-        for ronda in juego[1:-1]:
-            decision = ronda.get("decision")
-            resultado = ronda.get("resultado")
-            if not decision or not resultado:
+            if None in [gan_act, gan_ant, sust_act, sust_ant, prod_act, prod_ant]:
                 continue
 
-            prod_plan = resultado.get("produccion_planeada")
-            prod_real = resultado.get("produccion_real")
-            consumo_plan = resultado.get("consumo_planeado")
-            consumo_real = resultado.get("consumo_real")
-            gan_prev = valores_iniciales.get("indice_ganancias")
-            gan_actual = resultado.get("indice_ganancias")
-            sust_prev = valores_iniciales.get("indice_sustentabilidad")
-            sust_actual = resultado.get("indice_sustentabilidad")
-            agua_prev = valores_iniciales.get("agua_superficie")
-            agua_actual = resultado.get("agua_superficie")
+            cambio_en_ganancias = gan_act - gan_ant
+            cambio_en_sustentabilidad = sust_act - sust_ant
+            cambio_en_produccion = prod_act - prod_ant
 
-            if prod_plan is not None and prod_real is not None and (prod_plan - prod_real) > 0:
-                categorias["reduccion_por_capacidad_produccion"].append((100, peso))
-            if consumo_plan is not None and consumo_real is not None and (consumo_plan - consumo_real) > 0:
-                categorias["reduccion_por_capacidad_consumo"].append((100, peso))
-            if gan_prev is not None and gan_actual is not None and (gan_prev - gan_actual) > 5:
-                categorias["aumento_por_bajo_indice_ganancia"].append((100, peso))
-            if sust_prev is not None and sust_actual is not None and (sust_prev - sust_actual) > 5:
-                categorias["reduccion_por_bajo_indice_susten"].append((100, peso))
-            if agua_prev is not None and agua_actual is not None and (agua_prev - agua_actual) > (0.15 * agua_prev):
-                categorias["reduccion_por_sobre_consumo"].append((100, peso))
+            for condicion in condiciones:
+                if condicion not in acumuladores:
+                    continue
 
-    nuevos_parametros = {}
-    for key, ajustes in categorias.items():
-        if not ajustes:
-            nuevos_parametros[key] = get_parametros_default()[key]
+                # Evaluación de impacto de cada parametro en los indicadores
+                
+                # Si la produccion y las ganancias ahumentaron y la sustentabilidad no bajó demaciado
+                if cambio_en_produccion > 0 and cambio_en_ganancias > 0 and cambio_en_sustentabilidad > -10:
+                    acumuladores[condicion].append(1)
+                # Si la produccion o la sustentabilidad bajan
+                elif cambio_en_produccion < 0 or cambio_en_sustentabilidad < 0:
+                    acumuladores[condicion].append(-1)
+                # neutro
+                else:
+                    acumuladores[condicion].append(0)
+
+    # Cargar parámetros actuales
+    parametros = cargar_parametros()
+
+    # Ajuste según evaluación de impacto
+    for clave, impactos in acumuladores.items():
+        if not impactos:
             continue
 
-        total_ponderado = sum(valor * peso for valor, peso in ajustes)
-        total_pesos = sum(peso for _, peso in ajustes)
-        nuevos_parametros[key] = round(total_ponderado / total_pesos)
+        promedio = sum(impactos) / len(impactos)
+        ajuste = promedio * 10  # impacto ajusta en ±10 unidades
+        nuevo_valor = parametros.get(clave, 100) + ajuste
+        parametros[clave] = max(10, round(nuevo_valor))  # límite mínimo
 
-    guardar_parametros(nuevos_parametros)
-    print("🔄 Parámetros ajustados:", nuevos_parametros)
+    guardar_parametros(parametros)
+    print("✅ Parámetros ajustados:", parametros)
