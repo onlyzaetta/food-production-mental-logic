@@ -68,6 +68,10 @@ class MotorLogico:
             reservas_actual = estado.get("reservas")
             gan_actuales = estado.get("ganancias_anuales")
 
+
+            self.recomendacionBombeo = 50
+            self.recomendacionProduccion = 500
+
             # Si existe una recomendacion previa se utiliza para lo valores base
             if prod_plan_actual is not None and bombeo_agua_planeado is not None:
                 self.recomendacionProduccion = prod_plan_actual
@@ -75,15 +79,10 @@ class MotorLogico:
 
 
             # -producción planeada (PP) - producción real (PR) > 0
-            if (prod_plan_actual - prod_real_actual > 0):
+            if (prod_plan_actual - prod_real_actual > 0) or (bombeo_agua_planeado - bombeo_agua_real > 0):
                 self.recomendacionProduccion -= self.parametros["reduccion_por_capacidad_produccion"]
                 condiciones_aplicadas.append("reduccion_por_capacidad_produccion")
                 razon_recomendacion.append("Reducir la producción por que se sobrepasó la capacidad de produccion del terreno")
-            # -consumo planeado (CP) - consumo real (CR) > 0
-            if (bombeo_agua_planeado - bombeo_agua_real > 0):#revisar
-                self.recomendacionProduccion -= self.parametros["reduccion_por_capacidad_consumo"]
-                condiciones_aplicadas.append("reduccion_por_capacidad_consumo")
-                razon_recomendacion.append("Reducir la producción por que se sobrepasó la capacidad de consumo de agua del terreno")
             
             # Antes de comparar con rondas previas aseguremonos de que no estén vacias
             if anterior:

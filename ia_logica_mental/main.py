@@ -14,13 +14,13 @@ consumo_planeado = st.number_input("Consumo planeado", min_value=0, max_value=90
 consumo_real = st.number_input("Consumo real", min_value=0, max_value=9000)
 bombeo_planeado= st.number_input("Bombeo planeado", min_value=0,max_value=10000)
 bombeo_real = st.number_input("Bombeo real", min_value=0, max_value=10000)
-##Produccion y ganancias
+#Produccion y ganancias
 produccion_planeada = st.number_input("Producción planeada", min_value=0, max_value=2000)
 produccion_real = st.number_input("Producción real (kg/año)", min_value=0, max_value=2000)
 produccion_acumulada = st.number_input("Produccion acumulada", min_value=0, max_value=100000, step=100)
 ganancias_anuales = st.number_input("Ganancias anuales", min_value=0, max_value=9000, step=10)
 ganancias_acumuladas = st.number_input("Ganancias acumuladas", min_value=0, max_value=450000, step=1)
-##Indices
+#Indices
 indice_ganancias = st.number_input("Índice de ganancias", min_value=0, max_value=100, step=1)
 indice_sustentabilidad = st.number_input("Índice de sustentabilidad", min_value=0, max_value=100, step=1)
 indice_rendimiento = st.number_input("Índice de rendimiento", min_value=0, max_value=100, step=1)
