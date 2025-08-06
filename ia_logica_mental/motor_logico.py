@@ -68,17 +68,13 @@ class MotorLogico:
             reservas_actual = estado.get("reservas")
             gan_actuales = estado.get("ganancias_anuales")
 
-
-            self.recomendacionBombeo = 50
-            self.recomendacionProduccion = 500
-
             # Si existe una recomendacion previa se utiliza para lo valores base
             if prod_plan_actual is not None and bombeo_agua_planeado is not None:
                 self.recomendacionProduccion = prod_plan_actual
                 self.recomendacionBombeo = bombeo_agua_planeado
 
 
-            # -producción planeada (PP) - producción real (PR) > 0
+            # -producción planeada (PP) - producción real (PR) > 0 /or/ onsumo planeado (CP) - consumo real (CR) > 0
             if (prod_plan_actual - prod_real_actual > 0) or (bombeo_agua_planeado - bombeo_agua_real > 0):
                 self.recomendacionProduccion -= self.parametros["reduccion_por_capacidad_produccion"]
                 condiciones_aplicadas.append("reduccion_por_capacidad_produccion")
@@ -124,6 +120,13 @@ class MotorLogico:
         self.recomendacionBombeo = min(100, max(0, self.recomendacionBombeo))
         self.recomendacionProduccion = min(2000,max(0, self.recomendacionProduccion))
 
+        # Guardar experiencia con condiciones
+        self.memoria.guardar_experiencia(
+            entrada=estado,
+            decision=self.resultado,
+            resultado={}
+        )
+
         # Resultado final de la ronda
         self.resultado = {
             "fraccion_bombeo": self.recomendacionBombeo,
@@ -131,12 +134,5 @@ class MotorLogico:
             "condiciones_aplicadas": condiciones_aplicadas,
             "razon_recomendacion": razon_recomendacion
         }
-
-        # Guardar experiencia con condiciones
-        self.memoria.guardar_experiencia(
-            entrada=estado,
-            decision=self.resultado,
-            resultado={}
-        )
 
         return self.resultado
