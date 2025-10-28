@@ -92,14 +92,8 @@ Luego abre el enlace local que aparezca en la terminal (por lo general `http://l
 
 ---
 
-## Datos de ejemplo
-Incluye (opcionalmente) archivos **anonimizados** en la raíz (`experiencias_*.json`) o en una carpeta `experiencias/` para permitir una prueba rápida. Evita subir datos sensibles o licenciados.
-
----
-
 ## Pruebas rápidas
 - Ejecuta un flujo mínimo con parámetros ficticios para verificar que `motor_logico.py` y `memoria.py` interactúan correctamente.
-- (Opcional) Agrega pruebas unitarias con `pytest` y un workflow sencillo en GitHub Actions.
 
 ---
 
