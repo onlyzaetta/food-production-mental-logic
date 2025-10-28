@@ -120,7 +120,7 @@ Este repositorio incluye un archivo `CITATION.cff` para que GitHub muestre “Ci
 **BibTeX**
 ```bibtex
 @software{logica_mental_2025,
-  author    = {Benjam{\'\i}n Soto Gonz{\'a}lez and Carlos Tom{\'a}s Rodr{\'\i}guez Rodr{\'\i}guez},
+  author    = {Benjamín Soto González and Carlos Tomás Rodríguez Rodríguez},
   title     = {L{\'o}gica Mental -- Motor en Python para el Food Production Game},
   version   = {v1.2.0},
   year      = {2025},
