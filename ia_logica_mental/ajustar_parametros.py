@@ -28,7 +28,7 @@ def guardar_parametros(parametros):
 
 def ajustar_parametros():
     if not HISTORIAL_FILE.exists():
-        print("⚠️ No hay historial para ajustar parámetros.")
+        print(" No hay historial para ajustar parámetros.")
         return
 
     with open(HISTORIAL_FILE, 'r', encoding='utf-8') as f:
@@ -93,4 +93,4 @@ def ajustar_parametros():
         parametros[clave] = max(10, round(nuevo_valor))  # límite mínimo
 
     guardar_parametros(parametros)
-    print("✅ Parámetros ajustados:", parametros)
+    print(" Parámetros ajustados:", parametros)

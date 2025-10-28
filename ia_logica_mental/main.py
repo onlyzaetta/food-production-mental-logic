@@ -45,16 +45,16 @@ if st.button("Enviar a motor lógico"):
         "indice_rendimiento": indice_rendimiento
     }
 
-    st.success("✅ Estado recibido. Procesando recomendación...")
+    st.success(" Estado recibido. Procesando recomendación...")
 
     motor = MotorLogico()
     resultado = motor.procesar_estado(estado)
 
 
     if "mensaje" in resultado:
-        st.info(f"ℹ️ {resultado['mensaje']}")
+        st.info(f"ℹ {resultado['mensaje']}")
     else:
-        st.subheader("💡 Recomendación:")
+        st.subheader(" Recomendación:")
         st.write(f"Fracción de bombeo recomendada: {resultado.get('fraccion_bombeo', 'No definida')} %")
         st.write(f"Producción planeada recomendada: {resultado.get('produccion_planeada', 'No definida')} kg/año")
 
@@ -66,12 +66,12 @@ if st.button("Enviar a motor lógico"):
 
         condiciones = resultado.get("razon_recomendacion", [])
         if condiciones:
-            st.markdown("### 🤔 Razón(es) de la recomendación:")
+            st.markdown("### Razón(es) de la recomendación:")
             for condicion in condiciones:
                 st.write(f"• {condicion}")
 
 
 
-if st.button("📊 Visualizar evolución de parámetros y resultados"):
+if st.button(" Visualizar evolución de parámetros y resultados"):
     import visualizar_evolucion
     visualizar_evolucion.mostrar_graficos()

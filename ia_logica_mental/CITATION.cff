@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "Si usas este software en tu investigación, por favor cita esta versión."
+title: "Lógica Mental – Motor en Python para el Food Production Game"
+abstract: >
+  Implementación en Python de un motor de lógica mental con memoria de corto y largo plazo
+  para apoyar decisiones en el simulador Food Production Game. Código publicado con fines
+  académicos para transparencia y reproducibilidad de una tesis investigativa de la
+  Universidad de Talca (Chile).
+type: software
+version: "v1.2.0"
+date-released: "2025-10-28"
+license: MIT
+authors:
+  - family-names: "Soto González"
+    given-names: "Benjamín"
+    affiliation: "Universidad de Talca, Chile"
+  - family-names: "Rodríguez Rodríguez"
+    given-names: "Carlos Tomás"
+    affiliation: "Universidad de Talca, Chile"
+keywords:
+  - logica mental
+  - reglas
+  - memoria
+  - food production game
+  - python
+  - streamlit
+repository-code: "https://github.com/onlyzaetta/food-production-mental-logic"
+preferred-citation:
+  type: software
+  title: "Lógica Mental – Motor en Python para el Food Production Game"
+  version: "v1.2.0"
+  date-released: "2025-10-28"
+  url: "https://github.com/onlyzaetta/food-production-mental-logic/tree/v1.2.0"
+  authors:
+    - family-names: "Soto González"
+      given-names: "Benjamín"
+    - family-names: "Rodríguez Rodríguez"
+      given-names: "Carlos Tomás"
