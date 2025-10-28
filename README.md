@@ -97,15 +97,6 @@ Luego abre el enlace local que aparezca en la terminal (por lo general `http://l
 
 ---
 
-## Reproducibilidad y versión de la tesis
-Para enlazar desde el libro, usa una **etiqueta inmutable**:
-```bash
-git tag -a v1.2.0 -m "Versión asociada a la tesis (28 Oct 2025)"
-git push --tags
-```
-
----
-
 ## Cómo citar
 Este repositorio incluye un archivo `CITATION.cff` para que GitHub muestre “Cite this repository”. Ejemplo de cita 
 
