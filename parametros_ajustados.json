@@ -1,10 +1,10 @@
 {
-    "reduccion_por_capacidad_produccion": 32,
-    "reduccion_por_capacidad_consumo": 32,
-    "aumento_por_bajo_indice_ganancia": 117,
-    "reduccion_por_bajo_indice_susten": 90,
-    "reduccion_por_sobre_consumo": 90,
-    "aumento_por_bajas_precipitaciones": 90,
-    "reduccion_por_bajas_reservas": 100,
-    "aumento_por_altas_ganancias": 90
+    "reduccion_por_capacidad_produccion": 100,
+    "reduccion_por_capacidad_consumo": 100,
+    "aumento_por_bajo_indice_ganancia": 50,
+    "reduccion_por_bajo_indice_susten": 50,
+    "reduccion_por_sobre_consumo": 50,
+    "aumento_por_bajas_precipitaciones": 50,
+    "reduccion_por_bajas_reservas": 50,
+    "aumento_por_altas_ganancias": 50
 }

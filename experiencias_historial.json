@@ -3,1876 +3,6 @@
         {
             "valores_iniciales": {
                 "agua_superficie": 7000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "indice_ganancias": 97,
-                "indice_sustentabilidad": 99
-            },
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000
-            },
-            "resultado": {
-                "agua_superficie": 5520,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 99
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1500
-            },
-            "resultado": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 7500,
-                "consumo_real": 6640,
-                "produccion_planeada": 1500,
-                "produccion_real": 1330,
-                "indice_ganancias": 75,
-                "indice_sustentabilidad": 87
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800
-            },
-            "resultado": {
-                "agua_superficie": 3490,
-                "consumo_planeado": 4000,
-                "consumo_real": 4000,
-                "produccion_planeada": 800,
-                "produccion_real": 800,
-                "indice_ganancias": 75,
-                "indice_sustentabilidad": 86
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000
-            },
-            "resultado": {
-                "agua_superficie": 2320,
-                "consumo_planeado": 5000,
-                "consumo_real": 4820,
-                "produccion_planeada": 1000,
-                "produccion_real": 967,
-                "indice_ganancias": 76,
-                "indice_sustentabilidad": 83
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800
-            },
-            "resultado": {
-                "agua_superficie": 2170,
-                "consumo_planeado": 4000,
-                "consumo_real": 4000,
-                "produccion_planeada": 800,
-                "produccion_real": 800,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 81
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000
-            },
-            "resultado": {
-                "agua_superficie": 1750,
-                "consumo_planeado": 5000,
-                "consumo_real": 4250,
-                "produccion_planeada": 1000,
-                "produccion_real": 852,
-                "indice_ganancias": 78,
-                "indice_sustentabilidad": 78
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800
-            },
-            "resultado": {
-                "agua_superficie": 1460,
-                "consumo_planeado": 4000,
-                "consumo_real": 3460,
-                "produccion_planeada": 800,
-                "produccion_real": 695,
-                "indice_ganancias": 79,
-                "indice_sustentabilidad": 76
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800
-            },
-            "resultado": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4000,
-                "consumo_real": 3180,
-                "produccion_planeada": 800,
-                "produccion_real": 635,
-                "indice_ganancias": 80,
-                "indice_sustentabilidad": 73
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800
-            },
-            "resultado": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4000,
-                "consumo_real": 3180,
-                "produccion_planeada": 800,
-                "produccion_real": 635,
-                "indice_ganancias": 80,
-                "indice_sustentabilidad": 73
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800
-            },
-            "resultado": {}
-        },
-        {
-            "valores_finales": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4000,
-                "consumo_real": 3180,
-                "produccion_planeada": 800,
-                "produccion_real": 635,
-                "indice_ganancias": 80,
-                "indice_sustentabilidad": 73
-            },
-            "decision": {},
-            "resultado": {}
-        }
-    ],
-    [
-        {
-            "valores_iniciales": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "indice_ganancias": 66,
-                "indice_sustentabilidad": 98
-            },
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 4870,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 63,
-                "indice_sustentabilidad": 96
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 400,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [
-                    "reduccion_por_sobre_consumo"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_sobre_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 3520,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 66,
-                "indice_sustentabilidad": 94
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 3500,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 68,
-                "indice_sustentabilidad": 92
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2840,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 70,
-                "indice_sustentabilidad": 89
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2320,
-                "consumo_planeado": 5000,
-                "consumo_real": 4820,
-                "produccion_planeada": 1000,
-                "produccion_real": 967,
-                "indice_ganancias": 72,
-                "indice_sustentabilidad": 86
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 2170,
-                "consumo_planeado": 4000,
-                "consumo_real": 4000,
-                "produccion_planeada": 800,
-                "produccion_real": 800,
-                "indice_ganancias": 73,
-                "indice_sustentabilidad": 84
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 1750,
-                "consumo_planeado": 5000,
-                "consumo_real": 4250,
-                "produccion_planeada": 1000,
-                "produccion_real": 852,
-                "indice_ganancias": 75,
-                "indice_sustentabilidad": 82
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 1460,
-                "consumo_planeado": 4000,
-                "consumo_real": 3460,
-                "produccion_planeada": 800,
-                "produccion_real": 695,
-                "indice_ganancias": 76,
-                "indice_sustentabilidad": 79
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4000,
-                "consumo_real": 3180,
-                "produccion_planeada": 800,
-                "produccion_real": 635,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 77
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 800,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {}
-        },
-        {
-            "valores_finales": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4000,
-                "consumo_real": 3180,
-                "produccion_planeada": 800,
-                "produccion_real": 635,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 77
-            },
-            "decision": {},
-            "condiciones_aplicadas": [],
-            "resultado": {}
-        }
-    ],
-    [
-        {
-            "valores_iniciales": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "indice_ganancias": 66,
-                "indice_sustentabilidad": 98
-            },
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 4870,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 63,
-                "indice_sustentabilidad": 96
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 400,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [
-                    "reduccion_por_sobre_consumo"
-                ],
-                "razon_recomendacion": [
-                    "reducir la produccion debido al sobre consumo del agua en superficie"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_sobre_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 6150,
-                "consumo_planeado": 2000,
-                "consumo_real": 2000,
-                "produccion_planeada": 400,
-                "produccion_real": 400,
-                "indice_ganancias": 56,
-                "indice_sustentabilidad": 96
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 550.0,
-                "produccion_planeada": 1100,
-                "condiciones_aplicadas": [
-                    "aumento_por_bajo_indice_ganancia"
-                ],
-                "razon_recomendacion": [
-                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "aumento_por_bajo_indice_ganancia"
-            ],
-            "resultado": {
-                "agua_superficie": 3570,
-                "consumo_planeado": 5500,
-                "consumo_real": 5500,
-                "produccion_planeada": 1100,
-                "produccion_real": 1100,
-                "indice_ganancias": 58,
-                "indice_sustentabilidad": 93
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2850,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 61,
-                "indice_sustentabilidad": 90
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2320,
-                "consumo_planeado": 5000,
-                "consumo_real": 4820,
-                "produccion_planeada": 1000,
-                "produccion_real": 967,
-                "indice_ganancias": 64,
-                "indice_sustentabilidad": 88
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 814,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 2120,
-                "consumo_planeado": 4070,
-                "consumo_real": 4070,
-                "produccion_planeada": 814,
-                "produccion_real": 814,
-                "indice_ganancias": 66,
-                "indice_sustentabilidad": 86
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 1750,
-                "consumo_planeado": 5000,
-                "consumo_real": 4250,
-                "produccion_planeada": 1000,
-                "produccion_real": 852,
-                "indice_ganancias": 68,
-                "indice_sustentabilidad": 83
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 814,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 1460,
-                "consumo_planeado": 4070,
-                "consumo_real": 3500,
-                "produccion_planeada": 814,
-                "produccion_real": 702,
-                "indice_ganancias": 70,
-                "indice_sustentabilidad": 80
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 814,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4070,
-                "consumo_real": 3210,
-                "produccion_planeada": 814,
-                "produccion_real": 642,
-                "indice_ganancias": 71,
-                "indice_sustentabilidad": 78
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 500,
-                "produccion_planeada": 814,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {}
-        },
-        {
-            "valores_finales": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4070,
-                "consumo_real": 3210,
-                "produccion_planeada": 814,
-                "produccion_real": 642,
-                "indice_ganancias": 71,
-                "indice_sustentabilidad": 78
-            },
-            "decision": {},
-            "condiciones_aplicadas": [],
-            "resultado": {}
-        }
-    ],
-    [
-        {
-            "valores_iniciales": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "indice_ganancias": 95,
-                "indice_sustentabilidad": 99
-            },
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 5520,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 96
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 90.0,
-                "produccion_planeada": 1100,
-                "condiciones_aplicadas": [
-                    "aumento_por_bajo_indice_ganancia",
-                    "reduccion_por_sobre_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
-                    "Reducir la producci\u00f3n debido al sobre consumo del agua en superficie"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "aumento_por_bajo_indice_ganancia",
-                "reduccion_por_sobre_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 5500,
-                "consumo_real": 5500,
-                "produccion_planeada": 1100,
-                "produccion_real": 1100,
-                "indice_ganancias": 68,
-                "indice_sustentabilidad": 91
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 4210,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 66,
-                "indice_sustentabilidad": 88
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 3510,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 68,
-                "indice_sustentabilidad": 86
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2840,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 69,
-                "indice_sustentabilidad": 84
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2320,
-                "consumo_planeado": 5000,
-                "consumo_real": 4820,
-                "produccion_planeada": 1000,
-                "produccion_real": 967,
-                "indice_ganancias": 72,
-                "indice_sustentabilidad": 81
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 828,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 2080,
-                "consumo_planeado": 4140,
-                "consumo_real": 4140,
-                "produccion_planeada": 828,
-                "produccion_real": 828,
-                "indice_ganancias": 73,
-                "indice_sustentabilidad": 79
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 1750,
-                "consumo_planeado": 5000,
-                "consumo_real": 4250,
-                "produccion_planeada": 1000,
-                "produccion_real": 852,
-                "indice_ganancias": 75,
-                "indice_sustentabilidad": 76
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 828,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 1460,
-                "consumo_planeado": 4290,
-                "consumo_real": 3610,
-                "produccion_planeada": 858,
-                "produccion_real": 724,
-                "indice_ganancias": 76,
-                "indice_sustentabilidad": 73
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 828,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {}
-        },
-        {
-            "valores_finales": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4140,
-                "consumo_real": 3250,
-                "produccion_planeada": 828,
-                "produccion_real": 649,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 71
-            },
-            "decision": {},
-            "condiciones_aplicadas": [],
-            "resultado": {}
-        }
-    ],
-    [
-        {
-            "valores_iniciales": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "indice_ganancias": 95,
-                "indice_sustentabilidad": 99
-            },
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 5520,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 96
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 90.0,
-                "produccion_planeada": 1100,
-                "condiciones_aplicadas": [
-                    "aumento_por_bajo_indice_ganancia",
-                    "reduccion_por_sobre_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
-                    "Reducir la producci\u00f3n debido al sobre consumo del agua en superficie"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "aumento_por_bajo_indice_ganancia",
-                "reduccion_por_sobre_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 5520,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 96
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 4840,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 72,
-                "indice_sustentabilidad": 94
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 4180,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 71,
-                "indice_sustentabilidad": 92
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 3510,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 72,
-                "indice_sustentabilidad": 89
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2840,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 73,
-                "indice_sustentabilidad": 87
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2320,
-                "consumo_planeado": 5000,
-                "consumo_real": 4820,
-                "produccion_planeada": 1000,
-                "produccion_real": 967,
-                "indice_ganancias": 75,
-                "indice_sustentabilidad": 84
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 844,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 2040,
-                "consumo_planeado": 4220,
-                "consumo_real": 4150,
-                "produccion_planeada": 844,
-                "produccion_real": 834,
-                "indice_ganancias": 76,
-                "indice_sustentabilidad": 82
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 844,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 2040,
-                "consumo_planeado": 4220,
-                "consumo_real": 4150,
-                "produccion_planeada": 844,
-                "produccion_real": 834,
-                "indice_ganancias": 76,
-                "indice_sustentabilidad": 82
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 844,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {}
-        },
-        {
-            "valores_finales": {
-                "agua_superficie": 1750,
-                "consumo_planeado": 4220,
-                "consumo_real": 3860,
-                "produccion_planeada": 844,
-                "produccion_real": 744,
-                "indice_ganancias": 78,
-                "indice_sustentabilidad": 79
-            },
-            "decision": {},
-            "condiciones_aplicadas": [],
-            "resultado": {}
-        }
-    ],
-    [
-        {
-            "valores_iniciales": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "indice_ganancias": 95,
-                "indice_sustentabilidad": 99
-            },
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 5520,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 96
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 90.0,
-                "produccion_planeada": 1100,
-                "condiciones_aplicadas": [
-                    "aumento_por_bajo_indice_ganancia",
-                    "reduccion_por_sobre_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
-                    "Reducir la producci\u00f3n debido al sobre consumo del agua en superficie"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "aumento_por_bajo_indice_ganancia",
-                "reduccion_por_sobre_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 5500,
-                "consumo_real": 5500,
-                "produccion_planeada": 1100,
-                "produccion_real": 1100,
-                "indice_ganancias": 68,
-                "indice_sustentabilidad": 91
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 4210,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 66,
-                "indice_sustentabilidad": 88
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 3510,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 68,
-                "indice_sustentabilidad": 86
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2840,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 69,
-                "indice_sustentabilidad": 84
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2320,
-                "consumo_planeado": 5000,
-                "consumo_real": 4820,
-                "produccion_planeada": 1000,
-                "produccion_real": 967,
-                "indice_ganancias": 72,
-                "indice_sustentabilidad": 81
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 858,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 2030,
-                "consumo_planeado": 4290,
-                "consumo_real": 4180,
-                "produccion_planeada": 858,
-                "produccion_real": 839,
-                "indice_ganancias": 73,
-                "indice_sustentabilidad": 79
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 858,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 1750,
-                "consumo_planeado": 4290,
-                "consumo_real": 3890,
-                "produccion_planeada": 858,
-                "produccion_real": 781,
-                "indice_ganancias": 75,
-                "indice_sustentabilidad": 76
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 858,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 1460,
-                "consumo_planeado": 4290,
-                "consumo_real": 3610,
-                "produccion_planeada": 858,
-                "produccion_real": 724,
-                "indice_ganancias": 76,
-                "indice_sustentabilidad": 74
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 858,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {}
-        },
-        {
-            "valores_finales": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4290,
-                "consumo_real": 3320,
-                "produccion_planeada": 858,
-                "produccion_real": 664,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 71
-            },
-            "decision": {},
-            "condiciones_aplicadas": [],
-            "resultado": {}
-        }
-    ],
-    [
-        {
-            "valores_iniciales": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "indice_ganancias": 95,
-                "indice_sustentabilidad": 99
-            },
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 5520,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 96
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 90.0,
-                "produccion_planeada": 1100,
-                "condiciones_aplicadas": [
-                    "aumento_por_bajo_indice_ganancia",
-                    "reduccion_por_sobre_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
-                    "Reducir la producci\u00f3n debido al sobre consumo del agua en superficie"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "aumento_por_bajo_indice_ganancia",
-                "reduccion_por_sobre_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 7000,
-                "consumo_planeado": 5500,
-                "consumo_real": 5500,
-                "produccion_planeada": 1100,
-                "produccion_real": 1100,
-                "indice_ganancias": 68,
-                "indice_sustentabilidad": 91
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 4210,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 66,
-                "indice_sustentabilidad": 88
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 3510,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 68,
-                "indice_sustentabilidad": 86
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2840,
-                "consumo_planeado": 5000,
-                "consumo_real": 5000,
-                "produccion_planeada": 1000,
-                "produccion_real": 1000,
-                "indice_ganancias": 69,
-                "indice_sustentabilidad": 84
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 1000,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2320,
-                "consumo_planeado": 5000,
-                "consumo_real": 4820,
-                "produccion_planeada": 1000,
-                "produccion_real": 967,
-                "indice_ganancias": 72,
-                "indice_sustentabilidad": 81
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 870,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 2030,
-                "consumo_planeado": 4350,
-                "consumo_real": 4210,
-                "produccion_planeada": 870,
-                "produccion_real": 845,
-                "indice_ganancias": 73,
-                "indice_sustentabilidad": 79
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 870,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 1750,
-                "consumo_planeado": 4350,
-                "consumo_real": 3920,
-                "produccion_planeada": 870,
-                "produccion_real": 787,
-                "indice_ganancias": 75,
-                "indice_sustentabilidad": 76
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 870,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {
-                "agua_superficie": 1460,
-                "consumo_planeado": 4350,
-                "consumo_real": 3640,
-                "produccion_planeada": 870,
-                "produccion_real": 730,
-                "indice_ganancias": 76,
-                "indice_sustentabilidad": 74
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 870,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion",
-                    "reduccion_por_capacidad_consumo"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno",
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de consumo de agua del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion",
-                "reduccion_por_capacidad_consumo"
-            ],
-            "resultado": {}
-        },
-        {
-            "valores_finales": {
-                "agua_superficie": 1180,
-                "consumo_planeado": 4350,
-                "consumo_real": 3350,
-                "produccion_planeada": 870,
-                "produccion_real": 670,
-                "indice_ganancias": 77,
-                "indice_sustentabilidad": 71
-            },
-            "decision": {},
-            "condiciones_aplicadas": [],
-            "resultado": {}
-        }
-    ],
-    [
-        {
-            "valores_iniciales": {
-                "agua_superficie": 7000,
-                "precipitaciones": 7000,
-                "reservas": 354000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "produccion_acumulada": 9500,
-                "ganancias_anuales": 2380,
-                "ganancias_acumuladas": 47500,
-                "indice_ganancias": 95,
-                "indice_sustentabilidad": 99,
-                "indice_rendimiento": 97
-            },
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 500,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 7000,
-                "precipitaciones": 6500,
-                "reservas": 353000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "produccion_acumulada": 12000,
-                "ganancias_anuales": 2380,
-                "ganancias_acumuladas": 59375,
-                "indice_ganancias": 66,
-                "indice_sustentabilidad": 98,
-                "indice_rendimiento": 82
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 110.0,
-                "produccion_planeada": 600,
-                "condiciones_aplicadas": [
-                    "aumento_por_bajo_indice_ganancia",
-                    "aumento_por_bajas_precipitaciones"
-                ],
-                "razon_recomendacion": [
-                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
-                    "Aumento de bombeo por baja significativa en precipitaciones"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "aumento_por_bajo_indice_ganancia",
-                "aumento_por_bajas_precipitaciones"
-            ],
-            "resultado": {
-                "agua_superficie": 6380,
-                "precipitaciones": 6000,
-                "reservas": 351000,
-                "consumo_planeado": 3000,
-                "consumo_real": 3000,
-                "bombeo_planeado": 1650,
-                "bombeo_real": 1650,
-                "produccion_planeada": 600,
-                "produccion_real": 600,
-                "produccion_acumulada": 14900,
-                "ganancias_anuales": 2840,
-                "ganancias_acumuladas": 70715,
-                "indice_ganancias": 57,
-                "indice_sustentabilidad": 98,
-                "indice_rendimiento": 76
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 500,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 5840,
-                "precipitaciones": 5500,
-                "reservas": 348000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "produccion_acumulada": 17500,
-                "ganancias_anuales": 2380,
-                "ganancias_acumuladas": 83050,
-                "indice_ganancias": 51,
-                "indice_sustentabilidad": 97,
-                "indice_rendimiento": 74
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 500,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 5180,
-                "precipitaciones": 5000,
-                "reservas": 346000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "produccion_acumulada": 20000,
-                "ganancias_anuales": 2380,
-                "ganancias_acumuladas": 97300,
-                "indice_ganancias": 48,
-                "indice_sustentabilidad": 96,
-                "indice_rendimiento": 72
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 500,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 4510,
-                "precipitaciones": 4500,
-                "reservas": 344000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "produccion_acumulada": 22500,
-                "ganancias_anuales": 2380,
-                "ganancias_acumuladas": 106800,
-                "indice_ganancias": 47,
-                "indice_sustentabilidad": 96,
-                "indice_rendimiento": 71
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 500,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 3840,
-                "precipitaciones": 4000,
-                "reservas": 342000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "produccion_acumulada": 25000,
-                "ganancias_anuales": 2380,
-                "ganancias_acumuladas": 118675,
-                "indice_ganancias": 46,
-                "indice_sustentabilidad": 95,
-                "indice_rendimiento": 71
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 500,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 3180,
-                "precipitaciones": 3500,
-                "reservas": 339000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "produccion_acumulada": 27500,
-                "ganancias_anuales": 2380,
-                "ganancias_acumuladas": 130550,
-                "indice_ganancias": 46,
-                "indice_sustentabilidad": 95,
-                "indice_rendimiento": 71
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 500,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 2510,
-                "precipitaciones": 3000,
-                "reservas": 335000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2500,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 500,
-                "produccion_acumulada": 30000,
-                "ganancias_anuales": 2380,
-                "ganancias_acumuladas": 142526,
-                "indice_ganancias": 47,
-                "indice_sustentabilidad": 94,
-                "indice_rendimiento": 71
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 500,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
-            },
-            "condiciones_aplicadas": [],
-            "resultado": {
-                "agua_superficie": 1190,
-                "precipitaciones": 2000,
-                "reservas": 326000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2440,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 488,
-                "produccion_acumulada": 35000,
-                "ganancias_anuales": 2310,
-                "ganancias_acumuladas": 168539,
-                "indice_ganancias": 50,
-                "indice_sustentabilidad": 92,
-                "indice_rendimiento": 71
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 50,
-                "produccion_planeada": 441,
-                "condiciones_aplicadas": [
-                    "reduccion_por_capacidad_produccion"
-                ],
-                "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por que se sobrepas\u00f3 la capacidad de produccion del terreno"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_capacidad_produccion"
-            ],
-            "resultado": {
-                "agua_superficie": 1190,
-                "precipitaciones": 2000,
-                "reservas": 326000,
-                "consumo_planeado": 2500,
-                "consumo_real": 2440,
-                "bombeo_planeado": 1250,
-                "bombeo_real": 1250,
-                "produccion_planeada": 500,
-                "produccion_real": 488,
-                "produccion_acumulada": 35000,
-                "ganancias_anuales": 2310,
-                "ganancias_acumuladas": 168539,
-                "indice_ganancias": 50,
-                "indice_sustentabilidad": 92,
-                "indice_rendimiento": 71
-            }
-        }
-    ],
-    [
-        {
-            "valores_iniciales": {
-                "agua_superficie": 7000,
                 "precipitaciones": 7000,
                 "reservas": 354000,
                 "consumo_planeado": 2500,
@@ -1916,7 +46,7 @@
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 610,
+                "produccion_planeada": 600,
                 "condiciones_aplicadas": [
                     "aumento_por_bajo_indice_ganancia",
                     "aumento_por_bajas_precipitaciones"
@@ -1934,15 +64,15 @@
                 "agua_superficie": 7000,
                 "precipitaciones": 6000,
                 "reservas": 350000,
-                "consumo_planeado": 3050,
-                "consumo_real": 3050,
-                "bombeo_planeado": 3050,
-                "bombeo_real": 3050,
-                "produccion_planeada": 610,
-                "produccion_real": 610,
+                "consumo_planeado": 3000,
+                "consumo_real": 3000,
+                "bombeo_planeado": 3000,
+                "bombeo_real": 3000,
+                "produccion_planeada": 600,
+                "produccion_real": 600,
                 "produccion_acumulada": 14900,
-                "ganancias_anuales": 2750,
-                "ganancias_acumuladas": 73100,
+                "ganancias_anuales": 2700,
+                "ganancias_acumuladas": 72875,
                 "indice_ganancias": 52,
                 "indice_sustentabilidad": 96,
                 "indice_rendimiento": 74
@@ -1951,154 +81,214 @@
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 610,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
+                "produccion_planeada": 710.0,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
             },
-            "condiciones_aplicadas": [],
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
             "resultado": {
                 "agua_superficie": 7000,
                 "precipitaciones": 5500,
                 "reservas": 340000,
-                "consumo_planeado": 3050,
-                "consumo_real": 3050,
-                "bombeo_planeado": 3050,
-                "bombeo_real": 3050,
-                "produccion_planeada": 610,
-                "produccion_real": 610,
-                "produccion_acumulada": 18000,
-                "ganancias_anuales": 2750,
-                "ganancias_acumuladas": 86825,
-                "indice_ganancias": 46,
-                "indice_sustentabilidad": 93,
+                "consumo_planeado": 3550,
+                "consumo_real": 3550,
+                "bombeo_planeado": 3550,
+                "bombeo_real": 3550,
+                "produccion_planeada": 710,
+                "produccion_real": 710,
+                "produccion_acumulada": 18300,
+                "ganancias_anuales": 3200,
+                "ganancias_acumuladas": 88850,
+                "indice_ganancias": 47,
+                "indice_sustentabilidad": 92,
                 "indice_rendimiento": 69
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 610,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
+                "produccion_planeada": 720.0,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "reduccion_por_bajo_indice_susten",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Reducir la producción por bajada excesiva del índice de sustentabilidad",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
             },
-            "condiciones_aplicadas": [],
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "reduccion_por_bajo_indice_susten",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
             "resultado": {
                 "agua_superficie": 6820,
                 "precipitaciones": 5000,
-                "reservas": 330000,
-                "consumo_planeado": 3050,
-                "consumo_real": 3050,
-                "bombeo_planeado": 3050,
-                "bombeo_real": 3050,
-                "produccion_planeada": 610,
-                "produccion_real": 610,
-                "produccion_acumulada": 21000,
-                "ganancias_anuales": 2750,
-                "ganancias_acumuladas": 100550,
-                "indice_ganancias": 42,
-                "indice_sustentabilidad": 90,
+                "reservas": 327000,
+                "consumo_planeado": 3600,
+                "consumo_real": 3600,
+                "bombeo_planeado": 3600,
+                "bombeo_real": 3600,
+                "produccion_planeada": 720,
+                "produccion_real": 720,
+                "produccion_acumulada": 21900,
+                "ganancias_anuales": 3240,
+                "ganancias_acumuladas": 105050,
+                "indice_ganancias": 44,
+                "indice_sustentabilidad": 89,
                 "indice_rendimiento": 66
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 610,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
+                "produccion_planeada": 720,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
             },
-            "condiciones_aplicadas": [],
+            "condiciones_aplicadas": [
+                "aumento_por_bajas_precipitaciones"
+            ],
             "resultado": {
                 "agua_superficie": 6180,
                 "precipitaciones": 4500,
-                "reservas": 319000,
-                "consumo_planeado": 3050,
-                "consumo_real": 3050,
-                "bombeo_planeado": 3050,
-                "bombeo_real": 3050,
-                "produccion_planeada": 610,
-                "produccion_real": 610,
-                "produccion_acumulada": 24100,
-                "ganancias_anuales": 2750,
-                "ganancias_acumuladas": 114275,
-                "indice_ganancias": 40,
-                "indice_sustentabilidad": 87,
+                "reservas": 314000,
+                "consumo_planeado": 3600,
+                "consumo_real": 3600,
+                "bombeo_planeado": 3600,
+                "bombeo_real": 3600,
+                "produccion_planeada": 720,
+                "produccion_real": 720,
+                "produccion_acumulada": 25500,
+                "ganancias_anuales": 3240,
+                "ganancias_acumuladas": 121250,
+                "indice_ganancias": 42,
+                "indice_sustentabilidad": 85,
                 "indice_rendimiento": 63
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 610,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
+                "produccion_planeada": 620,
+                "condiciones_aplicadas": [
+                    "reduccion_por_bajo_indice_susten",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción por bajada excesiva del índice de sustentabilidad",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
             },
-            "condiciones_aplicadas": [],
+            "condiciones_aplicadas": [
+                "reduccion_por_bajo_indice_susten",
+                "aumento_por_bajas_precipitaciones"
+            ],
             "resultado": {
                 "agua_superficie": 5510,
                 "precipitaciones": 4000,
-                "reservas": 309000,
-                "consumo_planeado": 3050,
-                "consumo_real": 3050,
-                "bombeo_planeado": 3050,
-                "bombeo_real": 3050,
-                "produccion_planeada": 610,
-                "produccion_real": 610,
-                "produccion_acumulada": 27100,
-                "ganancias_anuales": 2750,
-                "ganancias_acumuladas": 125255,
-                "indice_ganancias": 39,
-                "indice_sustentabilidad": 85,
+                "reservas": 301000,
+                "consumo_planeado": 3100,
+                "consumo_real": 3100,
+                "bombeo_planeado": 3100,
+                "bombeo_real": 3100,
+                "produccion_planeada": 620,
+                "produccion_real": 620,
+                "produccion_acumulada": 28700,
+                "ganancias_anuales": 2790,
+                "ganancias_acumuladas": 135200,
+                "indice_ganancias": 40,
+                "indice_sustentabilidad": 82,
                 "indice_rendimiento": 61
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 610,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
+                "produccion_planeada": 520,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
             },
-            "condiciones_aplicadas": [],
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
             "resultado": {
                 "agua_superficie": 4840,
                 "precipitaciones": 3500,
-                "reservas": 298000,
-                "consumo_planeado": 3050,
-                "consumo_real": 3050,
-                "bombeo_planeado": 3050,
-                "bombeo_real": 3050,
-                "produccion_planeada": 610,
-                "produccion_real": 610,
-                "produccion_acumulada": 30200,
-                "ganancias_anuales": 2750,
-                "ganancias_acumuladas": 138980,
-                "indice_ganancias": 38,
-                "indice_sustentabilidad": 82,
+                "reservas": 290000,
+                "consumo_planeado": 2600,
+                "consumo_real": 2600,
+                "bombeo_planeado": 2600,
+                "bombeo_real": 2600,
+                "produccion_planeada": 520,
+                "produccion_real": 520,
+                "produccion_acumulada": 31400,
+                "ganancias_anuales": 2340,
+                "ganancias_acumuladas": 146900,
+                "indice_ganancias": 39,
+                "indice_sustentabilidad": 80,
                 "indice_rendimiento": 60
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 610,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
+                "produccion_planeada": 420,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
             },
-            "condiciones_aplicadas": [],
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
             "resultado": {
                 "agua_superficie": 4180,
                 "precipitaciones": 3000,
-                "reservas": 287000,
-                "consumo_planeado": 3050,
-                "consumo_real": 3050,
-                "bombeo_planeado": 3050,
-                "bombeo_real": 3050,
-                "produccion_planeada": 610,
-                "produccion_real": 610,
-                "produccion_acumulada": 30200,
-                "ganancias_anuales": 2750,
-                "ganancias_acumuladas": 155450,
+                "reservas": 154460,
+                "consumo_planeado": 2100,
+                "consumo_real": 2100,
+                "bombeo_planeado": 2100,
+                "bombeo_real": 2100,
+                "produccion_planeada": 420,
+                "produccion_real": 420,
+                "produccion_acumulada": 33600,
+                "ganancias_anuales": 1890,
+                "ganancias_acumuladas": 156350,
                 "indice_ganancias": 38,
                 "indice_sustentabilidad": 78,
                 "indice_rendimiento": 58
@@ -2107,53 +297,74 @@
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 610,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
+                "produccion_planeada": 320,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones",
+                    "reduccion_por_bajas_reservas"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Reducción de bombeo por baja significativa en reservas disponibles"
+                ]
             },
-            "condiciones_aplicadas": [],
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones",
+                "reduccion_por_bajas_reservas"
+            ],
             "resultado": {
                 "agua_superficie": 3510,
                 "precipitaciones": 2500,
-                "reservas": 275000,
-                "consumo_planeado": 3050,
-                "consumo_real": 3050,
-                "bombeo_planeado": 3050,
-                "bombeo_real": 3050,
-                "produccion_planeada": 610,
-                "produccion_real": 610,
-                "produccion_acumulada": 36300,
-                "ganancias_anuales": 2750,
-                "ganancias_acumuladas": 169175,
+                "reservas": 276000,
+                "consumo_planeado": 1600,
+                "consumo_real": 1600,
+                "bombeo_planeado": 1600,
+                "bombeo_real": 1600,
+                "produccion_planeada": 320,
+                "produccion_real": 320,
+                "produccion_acumulada": 35300,
+                "ganancias_anuales": 1440,
+                "ganancias_acumuladas": 163559,
                 "indice_ganancias": 38,
-                "indice_sustentabilidad": 75,
+                "indice_sustentabilidad": 77,
                 "indice_rendimiento": 57
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 610,
-                "condiciones_aplicadas": [],
-                "razon_recomendacion": []
+                "produccion_planeada": 220,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
             },
-            "condiciones_aplicadas": [],
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
             "resultado": {
                 "agua_superficie": 2840,
                 "precipitaciones": 2000,
-                "reservas": 261000,
-                "consumo_planeado": 3050,
-                "consumo_real": 3050,
-                "bombeo_planeado": 3050,
-                "bombeo_real": 3050,
-                "produccion_planeada": 610,
-                "produccion_real": 610,
-                "produccion_acumulada": 40000,
-                "ganancias_anuales": 2750,
-                "ganancias_acumuladas": 182900,
-                "indice_ganancias": 38,
-                "indice_sustentabilidad": 72,
-                "indice_rendimiento": 55
+                "reservas": 271000,
+                "consumo_planeado": 1100,
+                "consumo_real": 1100,
+                "bombeo_planeado": 1100,
+                "bombeo_real": 1100,
+                "produccion_planeada": 220,
+                "produccion_real": 220,
+                "produccion_acumulada": 36800,
+                "ganancias_anuales": 990,
+                "ganancias_acumuladas": 168500,
+                "indice_ganancias": 37,
+                "indice_sustentabilidad": 76,
+                "indice_rendimiento": 57
             }
         }
     ],
@@ -2163,6 +374,378 @@
                 "agua_superficie": 7000,
                 "precipitaciones": 7000,
                 "reservas": 354000,
+                "consumo_planeado": 2500,
+                "consumo_real": 2500,
+                "bombeo_planeado": 1250,
+                "bombeo_real": 1250,
+                "produccion_planeada": 500,
+                "produccion_real": 500,
+                "produccion_acumulada": 10000,
+                "ganancias_anuales": 2380,
+                "ganancias_acumuladas": 47500,
+                "indice_ganancias": 95,
+                "indice_sustentabilidad": 99,
+                "indice_rendimiento": 97
+            },
+            "decision": {
+                "fraccion_bombeo": 50,
+                "produccion_planeada": 500,
+                "condiciones_aplicadas": [],
+                "razon_recomendacion": []
+            },
+            "condiciones_aplicadas": [],
+            "resultado": {
+                "agua_superficie": 7000,
+                "precipitaciones": 6500,
+                "reservas": 353000,
+                "consumo_planeado": 2500,
+                "consumo_real": 2500,
+                "bombeo_planeado": 1250,
+                "bombeo_real": 1250,
+                "produccion_planeada": 500,
+                "produccion_real": 500,
+                "produccion_acumulada": 12000,
+                "ganancias_anuales": 2380,
+                "ganancias_acumuladas": 57000,
+                "indice_ganancias": 69,
+                "indice_sustentabilidad": 98,
+                "indice_rendimiento": 82
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 590,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 7000,
+                "precipitaciones": 6000,
+                "reservas": 350000,
+                "consumo_planeado": 2950,
+                "consumo_real": 2950,
+                "bombeo_planeado": 2950,
+                "bombeo_real": 2950,
+                "produccion_planeada": 590,
+                "produccion_real": 590,
+                "produccion_acumulada": 14900,
+                "ganancias_anuales": 2660,
+                "ganancias_acumuladas": 69995,
+                "indice_ganancias": 53,
+                "indice_sustentabilidad": 96,
+                "indice_rendimiento": 74
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 689.0,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
+            "resultado": {
+                "agua_superficie": 7000,
+                "precipitaciones": 5500,
+                "reservas": 340000,
+                "consumo_planeado": 3450,
+                "consumo_real": 3450,
+                "bombeo_planeado": 3450,
+                "bombeo_real": 3450,
+                "produccion_planeada": 689,
+                "produccion_real": 689,
+                "produccion_acumulada": 18200,
+                "ganancias_anuales": 3100,
+                "ganancias_acumuladas": 85052,
+                "indice_ganancias": 47,
+                "indice_sustentabilidad": 93,
+                "indice_rendimiento": 69
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 788.0,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
+            "resultado": {
+                "agua_superficie": 6820,
+                "precipitaciones": 5000,
+                "reservas": 327000,
+                "consumo_planeado": 3940,
+                "consumo_real": 3940,
+                "bombeo_planeado": 3940,
+                "bombeo_real": 3940,
+                "produccion_planeada": 785,
+                "produccion_real": 788,
+                "produccion_acumulada": 22000,
+                "ganancias_anuales": 3550,
+                "ganancias_acumuladas": 105883,
+                "indice_ganancias": 44,
+                "indice_sustentabilidad": 88,
+                "indice_rendimiento": 66
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 704.0,
+                "condiciones_aplicadas": [
+                    "reduccion_por_bajo_indice_susten",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción por bajada excesiva del índice de sustentabilidad",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_bajo_indice_susten",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
+            "resultado": {
+                "agua_superficie": 6180,
+                "precipitaciones": 4500,
+                "reservas": 327000,
+                "consumo_planeado": 3520,
+                "consumo_real": 3520,
+                "bombeo_planeado": 3520,
+                "bombeo_real": 3520,
+                "produccion_planeada": 704,
+                "produccion_real": 704,
+                "produccion_acumulada": 22000,
+                "ganancias_anuales": 3170,
+                "ganancias_acumuladas": 121723,
+                "indice_ganancias": 42,
+                "indice_sustentabilidad": 85,
+                "indice_rendimiento": 63
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 704,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 5510,
+                "precipitaciones": 4000,
+                "reservas": 300000,
+                "consumo_planeado": 3520,
+                "consumo_real": 3520,
+                "bombeo_planeado": 3520,
+                "bombeo_real": 3520,
+                "produccion_planeada": 704,
+                "produccion_real": 704,
+                "produccion_acumulada": 29200,
+                "ganancias_anuales": 3170,
+                "ganancias_acumuladas": 137563,
+                "indice_ganancias": 41,
+                "indice_sustentabilidad": 81,
+                "indice_rendimiento": 61
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 524,
+                "condiciones_aplicadas": [
+                    "reduccion_por_bajo_indice_susten",
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones",
+                    "reduccion_por_bajas_reservas"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción por bajada excesiva del índice de sustentabilidad",
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Reducción de bombeo por baja significativa en reservas disponibles"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_bajo_indice_susten",
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones",
+                "reduccion_por_bajas_reservas"
+            ],
+            "resultado": {
+                "agua_superficie": 4840,
+                "precipitaciones": 3500,
+                "reservas": 288000,
+                "consumo_planeado": 2620,
+                "consumo_real": 2620,
+                "bombeo_planeado": 2620,
+                "bombeo_real": 2620,
+                "produccion_planeada": 524,
+                "produccion_real": 524,
+                "produccion_acumulada": 32000,
+                "ganancias_anuales": 2360,
+                "ganancias_acumuladas": 149353,
+                "indice_ganancias": 40,
+                "indice_sustentabilidad": 79,
+                "indice_rendimiento": 59
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 434,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 4180,
+                "precipitaciones": 3000,
+                "reservas": 279000,
+                "consumo_planeado": 2170,
+                "consumo_real": 2170,
+                "bombeo_planeado": 2170,
+                "bombeo_real": 2170,
+                "produccion_planeada": 434,
+                "produccion_real": 434,
+                "produccion_acumulada": 34200,
+                "ganancias_anuales": 1950,
+                "ganancias_acumuladas": 157165,
+                "indice_ganancias": 39,
+                "indice_sustentabilidad": 78,
+                "indice_rendimiento": 58
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 344,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 3510,
+                "precipitaciones": 2500,
+                "reservas": 273000,
+                "consumo_planeado": 1720,
+                "consumo_real": 1720,
+                "bombeo_planeado": 1720,
+                "bombeo_real": 1720,
+                "produccion_planeada": 344,
+                "produccion_real": 344,
+                "produccion_acumulada": 36000,
+                "ganancias_anuales": 1550,
+                "ganancias_acumuladas": 165310,
+                "indice_ganancias": 38,
+                "indice_sustentabilidad": 76,
+                "indice_rendimiento": 55
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 254,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 2840,
+                "precipitaciones": 2000,
+                "reservas": 267000,
+                "consumo_planeado": 1270,
+                "consumo_real": 1270,
+                "bombeo_planeado": 1270,
+                "bombeo_real": 1270,
+                "produccion_planeada": 254,
+                "produccion_real": 254,
+                "produccion_acumulada": 37700,
+                "ganancias_anuales": 1140,
+                "ganancias_acumuladas": 172573,
+                "indice_ganancias": 37,
+                "indice_sustentabilidad": 75,
+                "indice_rendimiento": 56
+            }
+        }
+    ],
+    [
+        {
+            "valores_iniciales": {
+                "agua_superficie": 7000,
+                "precipitaciones": 7000,
+                "reservas": 47500,
                 "consumo_planeado": 2500,
                 "consumo_real": 2500,
                 "bombeo_planeado": 1250,
@@ -2204,7 +787,379 @@
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 620,
+                "produccion_planeada": 580,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 6250,
+                "precipitaciones": 6000,
+                "reservas": 351000,
+                "consumo_planeado": 2900,
+                "consumo_real": 2900,
+                "bombeo_planeado": 1450,
+                "bombeo_real": 1450,
+                "produccion_planeada": 580,
+                "produccion_real": 580,
+                "produccion_acumulada": 14800,
+                "ganancias_anuales": 2760,
+                "ganancias_acumuladas": 73150,
+                "indice_ganancias": 56,
+                "indice_sustentabilidad": 98,
+                "indice_rendimiento": 77
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 588.0,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
+            "resultado": {
+                "agua_superficie": 7000,
+                "precipitaciones": 5500,
+                "reservas": 348000,
+                "consumo_planeado": 2940,
+                "consumo_real": 2940,
+                "bombeo_planeado": 2940,
+                "bombeo_real": 2940,
+                "produccion_planeada": 588,
+                "produccion_real": 588,
+                "produccion_acumulada": 17800,
+                "ganancias_anuales": 2650,
+                "ganancias_acumuladas": 86380,
+                "indice_ganancias": 48,
+                "indice_sustentabilidad": 95,
+                "indice_rendimiento": 72
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 668,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 6820,
+                "precipitaciones": 5000,
+                "reservas": 338000,
+                "consumo_planeado": 3340,
+                "consumo_real": 3340,
+                "bombeo_planeado": 3340,
+                "bombeo_real": 3340,
+                "produccion_planeada": 668,
+                "produccion_real": 668,
+                "produccion_acumulada": 21000,
+                "ganancias_anuales": 3010,
+                "ganancias_acumuladas": 101410,
+                "indice_ganancias": 44,
+                "indice_sustentabilidad": 92,
+                "indice_rendimiento": 68
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 756.0,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
+            "resultado": {
+                "agua_superficie": 6180,
+                "precipitaciones": 4500,
+                "reservas": 325000,
+                "consumo_planeado": 3780,
+                "consumo_real": 3780,
+                "bombeo_planeado": 3780,
+                "bombeo_real": 3780,
+                "produccion_planeada": 756,
+                "produccion_real": 756,
+                "produccion_acumulada": 24700,
+                "ganancias_anuales": 3400,
+                "ganancias_acumuladas": 118420,
+                "indice_ganancias": 42,
+                "indice_sustentabilidad": 88,
+                "indice_rendimiento": 65
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 684.0,
+                "condiciones_aplicadas": [
+                    "reduccion_por_bajo_indice_susten",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción por bajada excesiva del índice de sustentabilidad",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_bajo_indice_susten",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
+            "resultado": {
+                "agua_superficie": 5510,
+                "precipitaciones": 4000,
+                "reservas": 311000,
+                "consumo_planeado": 3420,
+                "consumo_real": 3420,
+                "bombeo_planeado": 3420,
+                "bombeo_real": 3420,
+                "produccion_planeada": 684,
+                "produccion_real": 684,
+                "produccion_acumulada": 28200,
+                "ganancias_anuales": 3080,
+                "ganancias_acumuladas": 133810,
+                "indice_ganancias": 41,
+                "indice_sustentabilidad": 85,
+                "indice_rendimiento": 63
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 604,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 4840,
+                "precipitaciones": 3500,
+                "reservas": 299000,
+                "consumo_planeado": 3020,
+                "consumo_real": 3020,
+                "bombeo_planeado": 3020,
+                "bombeo_real": 3020,
+                "produccion_planeada": 604,
+                "produccion_real": 604,
+                "produccion_acumulada": 31300,
+                "ganancias_anuales": 2720,
+                "ganancias_acumuladas": 144682,
+                "indice_ganancias": 40,
+                "indice_sustentabilidad": 82,
+                "indice_rendimiento": 61
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 524,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 4180,
+                "precipitaciones": 3000,
+                "reservas": 289000,
+                "consumo_planeado": 2620,
+                "consumo_real": 2620,
+                "bombeo_planeado": 2620,
+                "bombeo_real": 2620,
+                "produccion_planeada": 524,
+                "produccion_real": 524,
+                "produccion_acumulada": 34000,
+                "ganancias_anuales": 2360,
+                "ganancias_acumuladas": 156832,
+                "indice_ganancias": 40,
+                "indice_sustentabilidad": 80,
+                "indice_rendimiento": 59
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 444,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 3510,
+                "precipitaciones": 2500,
+                "reservas": 280000,
+                "consumo_planeado": 2220,
+                "consumo_real": 2220,
+                "bombeo_planeado": 2220,
+                "bombeo_real": 2220,
+                "produccion_planeada": 444,
+                "produccion_real": 444,
+                "produccion_acumulada": 36300,
+                "ganancias_anuales": 2000,
+                "ganancias_acumuladas": 167182,
+                "indice_ganancias": 39,
+                "indice_sustentabilidad": 78,
+                "indice_rendimiento": 58
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 364,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 2840,
+                "precipitaciones": 2000,
+                "reservas": 271000,
+                "consumo_planeado": 1820,
+                "consumo_real": 1820,
+                "bombeo_planeado": 1820,
+                "bombeo_real": 1820,
+                "produccion_planeada": 364,
+                "produccion_real": 364,
+                "produccion_acumulada": 38600,
+                "ganancias_anuales": 1640,
+                "ganancias_acumuladas": 177370,
+                "indice_ganancias": 39,
+                "indice_sustentabilidad": 76,
+                "indice_rendimiento": 57
+            }
+        }
+    ],
+    [
+        {
+            "valores_iniciales": {
+                "agua_superficie": 7000,
+                "precipitaciones": 7000,
+                "reservas": 354000,
+                "consumo_planeado": 2500,
+                "consumo_real": 2500,
+                "bombeo_planeado": 1250,
+                "bombeo_real": 1250,
+                "produccion_planeada": 500,
+                "produccion_real": 500,
+                "produccion_acumulada": 9500,
+                "ganancias_anuales": 2380,
+                "ganancias_acumuladas": 45125,
+                "indice_ganancias": 95,
+                "indice_sustentabilidad": 99,
+                "indice_rendimiento": 97
+            },
+            "decision": {
+                "fraccion_bombeo": 50,
+                "produccion_planeada": 500,
+                "condiciones_aplicadas": [],
+                "razon_recomendacion": []
+            },
+            "condiciones_aplicadas": [],
+            "resultado": {
+                "agua_superficie": 7000,
+                "precipitaciones": 6500,
+                "reservas": 353000,
+                "consumo_planeado": 2500,
+                "consumo_real": 2500,
+                "bombeo_planeado": 1250,
+                "bombeo_real": 1250,
+                "produccion_planeada": 500,
+                "produccion_real": 500,
+                "produccion_acumulada": 12000,
+                "ganancias_anuales": 2380,
+                "ganancias_acumuladas": 57000,
+                "indice_ganancias": 69,
+                "indice_sustentabilidad": 98,
+                "indice_rendimiento": 82
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 570,
                 "condiciones_aplicadas": [
                     "aumento_por_bajo_indice_ganancia",
                     "aumento_por_bajas_precipitaciones"
@@ -2221,25 +1176,25 @@
             "resultado": {
                 "agua_superficie": 7000,
                 "precipitaciones": 6000,
-                "reservas": 349000,
-                "consumo_planeado": 3100,
-                "consumo_real": 3100,
-                "bombeo_planeado": 3100,
-                "bombeo_real": 3100,
-                "produccion_planeada": 620,
-                "produccion_real": 620,
-                "produccion_acumulada": 15000,
-                "ganancias_anuales": 2790,
-                "ganancias_acumuladas": 70535,
-                "indice_ganancias": 54,
+                "reservas": 350000,
+                "consumo_planeado": 2850,
+                "consumo_real": 2850,
+                "bombeo_planeado": 2850,
+                "bombeo_real": 2850,
+                "produccion_planeada": 570,
+                "produccion_real": 570,
+                "produccion_acumulada": 14800,
+                "ganancias_anuales": 2570,
+                "ganancias_acumuladas": 69635,
+                "indice_ganancias": 53,
                 "indice_sustentabilidad": 96,
-                "indice_rendimiento": 74
+                "indice_rendimiento": 75
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 750.0,
+                "produccion_planeada": 647.0,
                 "condiciones_aplicadas": [
                     "aumento_por_bajo_indice_ganancia",
                     "aumento_por_bajas_precipitaciones",
@@ -2248,7 +1203,7 @@
                 "razon_recomendacion": [
                     "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
                     "Aumento de bombeo por baja significativa en precipitaciones",
-                    "Aumento de producci\u00f3n debido a mejora significativa en ganancias anuales"
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
                 ]
             },
             "condiciones_aplicadas": [
@@ -2259,101 +1214,101 @@
             "resultado": {
                 "agua_superficie": 7000,
                 "precipitaciones": 5500,
-                "reservas": 339000,
-                "consumo_planeado": 3750,
-                "consumo_real": 3750,
-                "bombeo_planeado": 3750,
-                "bombeo_real": 3750,
-                "produccion_planeada": 750,
-                "produccion_real": 750,
-                "produccion_acumulada": 18600,
-                "ganancias_anuales": 3380,
-                "ganancias_acumuladas": 86825,
-                "indice_ganancias": 48,
-                "indice_sustentabilidad": 92,
-                "indice_rendimiento": 70
+                "reservas": 341000,
+                "consumo_planeado": 3240,
+                "consumo_real": 3240,
+                "bombeo_planeado": 3240,
+                "bombeo_real": 3240,
+                "produccion_planeada": 647,
+                "produccion_real": 647,
+                "produccion_acumulada": 17600,
+                "ganancias_anuales": 2910,
+                "ganancias_acumuladas": 86758,
+                "indice_ganancias": 46,
+                "indice_sustentabilidad": 93,
+                "indice_rendimiento": 69
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 780.0,
+                "produccion_planeada": 724.0,
                 "condiciones_aplicadas": [
                     "aumento_por_bajo_indice_ganancia",
-                    "reduccion_por_bajo_indice_susten",
                     "aumento_por_bajas_precipitaciones",
                     "aumento_por_altas_ganancias"
                 ],
                 "razon_recomendacion": [
                     "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
-                    "Reducir la producci\u00f3n por bajada excesiva del \u00edndice de sustentabilidad",
                     "Aumento de bombeo por baja significativa en precipitaciones",
-                    "Aumento de producci\u00f3n debido a mejora significativa en ganancias anuales"
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
                 ]
             },
             "condiciones_aplicadas": [
                 "aumento_por_bajo_indice_ganancia",
-                "reduccion_por_bajo_indice_susten",
                 "aumento_por_bajas_precipitaciones",
                 "aumento_por_altas_ganancias"
             ],
             "resultado": {
                 "agua_superficie": 6820,
                 "precipitaciones": 5000,
-                "reservas": 325000,
-                "consumo_planeado": 3900,
-                "consumo_real": 3900,
-                "bombeo_planeado": 3900,
-                "bombeo_real": 3900,
-                "produccion_planeada": 780,
-                "produccion_real": 780,
-                "produccion_acumulada": 22500,
-                "ganancias_anuales": 3510,
-                "ganancias_acumuladas": 104240,
-                "indice_ganancias": 45,
-                "indice_sustentabilidad": 88,
+                "reservas": 329000,
+                "consumo_planeado": 3620,
+                "consumo_real": 3620,
+                "bombeo_planeado": 3620,
+                "bombeo_real": 3620,
+                "produccion_planeada": 724,
+                "produccion_real": 724,
+                "produccion_acumulada": 21500,
+                "ganancias_anuales": 3260,
+                "ganancias_acumuladas": 103048,
+                "indice_ganancias": 43,
+                "indice_sustentabilidad": 89,
                 "indice_rendimiento": 66
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 680,
+                "produccion_planeada": 661.0,
                 "condiciones_aplicadas": [
                     "reduccion_por_bajo_indice_susten",
-                    "aumento_por_bajas_precipitaciones"
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
                 ],
                 "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por bajada excesiva del \u00edndice de sustentabilidad",
-                    "Aumento de bombeo por baja significativa en precipitaciones"
+                    "Reducir la producción por bajada excesiva del índice de sustentabilidad",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
                 ]
             },
             "condiciones_aplicadas": [
                 "reduccion_por_bajo_indice_susten",
-                "aumento_por_bajas_precipitaciones"
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
             ],
             "resultado": {
                 "agua_superficie": 6180,
                 "precipitaciones": 4500,
-                "reservas": 311000,
-                "consumo_planeado": 3400,
-                "consumo_real": 3400,
-                "bombeo_planeado": 3400,
-                "bombeo_real": 3400,
-                "produccion_planeada": 680,
-                "produccion_real": 680,
-                "produccion_acumulada": 26000,
-                "ganancias_anuales": 3060,
-                "ganancias_acumuladas": 119990,
-                "indice_ganancias": 43,
-                "indice_sustentabilidad": 85,
+                "reservas": 316000,
+                "consumo_planeado": 3310,
+                "consumo_real": 3310,
+                "bombeo_planeado": 3310,
+                "bombeo_real": 3310,
+                "produccion_planeada": 661,
+                "produccion_real": 661,
+                "produccion_acumulada": 24800,
+                "ganancias_anuales": 2970,
+                "ganancias_acumuladas": 117920,
+                "indice_ganancias": 41,
+                "indice_sustentabilidad": 86,
                 "indice_rendimiento": 63
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 680,
+                "produccion_planeada": 661,
                 "condiciones_aplicadas": [
                     "aumento_por_bajas_precipitaciones"
                 ],
@@ -2367,31 +1322,31 @@
             "resultado": {
                 "agua_superficie": 5510,
                 "precipitaciones": 4000,
-                "reservas": 299000,
-                "consumo_planeado": 3400,
-                "consumo_real": 3400,
-                "bombeo_planeado": 3400,
-                "bombeo_real": 3400,
-                "produccion_planeada": 680,
-                "produccion_real": 680,
-                "produccion_acumulada": 29400,
-                "ganancias_anuales": 3060,
-                "ganancias_acumuladas": 135290,
-                "indice_ganancias": 41,
-                "indice_sustentabilidad": 82,
+                "reservas": 304000,
+                "consumo_planeado": 3310,
+                "consumo_real": 3310,
+                "bombeo_planeado": 3310,
+                "bombeo_real": 3310,
+                "produccion_planeada": 661,
+                "produccion_real": 661,
+                "produccion_acumulada": 28200,
+                "ganancias_anuales": 2970,
+                "ganancias_acumuladas": 132793,
+                "indice_ganancias": 40,
+                "indice_sustentabilidad": 83,
                 "indice_rendimiento": 61
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 680,
+                "produccion_planeada": 591,
                 "condiciones_aplicadas": [
                     "reduccion_por_sobre_consumo",
                     "aumento_por_bajas_precipitaciones"
                 ],
                 "razon_recomendacion": [
-                    "Reducir el bombeo debido al sobre consumo del agua en superficie",
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
                     "Aumento de bombeo por baja significativa en precipitaciones"
                 ]
             },
@@ -2402,104 +1357,98 @@
             "resultado": {
                 "agua_superficie": 4840,
                 "precipitaciones": 3500,
-                "reservas": 286000,
-                "consumo_planeado": 3400,
-                "consumo_real": 3400,
-                "bombeo_planeado": 3400,
-                "bombeo_real": 3400,
-                "produccion_planeada": 680,
-                "produccion_real": 680,
-                "produccion_acumulada": 32800,
-                "ganancias_anuales": 3060,
-                "ganancias_acumuladas": 150590,
-                "indice_ganancias": 41,
-                "indice_sustentabilidad": 78,
-                "indice_rendimiento": 59
+                "reservas": 293000,
+                "consumo_planeado": 2960,
+                "consumo_real": 2960,
+                "bombeo_planeado": 2960,
+                "bombeo_real": 2960,
+                "produccion_planeada": 591,
+                "produccion_real": 591,
+                "produccion_acumulada": 31200,
+                "ganancias_anuales": 2660,
+                "ganancias_acumuladas": 146090,
+                "indice_ganancias": 39,
+                "indice_sustentabilidad": 80,
+                "indice_rendimiento": 60
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 580,
+                "produccion_planeada": 521,
                 "condiciones_aplicadas": [
-                    "reduccion_por_bajo_indice_susten",
                     "reduccion_por_sobre_consumo",
                     "aumento_por_bajas_precipitaciones"
                 ],
                 "razon_recomendacion": [
-                    "Reducir la producci\u00f3n por bajada excesiva del \u00edndice de sustentabilidad",
-                    "Reducir el bombeo debido al sobre consumo del agua en superficie",
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
                     "Aumento de bombeo por baja significativa en precipitaciones"
                 ]
             },
             "condiciones_aplicadas": [
-                "reduccion_por_bajo_indice_susten",
                 "reduccion_por_sobre_consumo",
                 "aumento_por_bajas_precipitaciones"
             ],
             "resultado": {
                 "agua_superficie": 4180,
-                "precipitaciones": 3000,
-                "reservas": 274000,
-                "consumo_planeado": 2900,
-                "consumo_real": 2900,
-                "bombeo_planeado": 2900,
-                "bombeo_real": 2900,
-                "produccion_planeada": 580,
-                "produccion_real": 580,
-                "produccion_acumulada": 35800,
-                "ganancias_anuales": 2610,
-                "ganancias_acumuladas": 164090,
-                "indice_ganancias": 40,
-                "indice_sustentabilidad": 75,
+                "precipitaciones": 4180,
+                "reservas": 282000,
+                "consumo_planeado": 2610,
+                "consumo_real": 2610,
+                "bombeo_planeado": 2610,
+                "bombeo_real": 2610,
+                "produccion_planeada": 521,
+                "produccion_real": 521,
+                "produccion_acumulada": 33900,
+                "ganancias_anuales": 2340,
+                "ganancias_acumuladas": 155468,
+                "indice_ganancias": 38,
+                "indice_sustentabilidad": 78,
+                "indice_rendimiento": 58
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 451,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo"
+            ],
+            "resultado": {
+                "agua_superficie": 3510,
+                "precipitaciones": 2500,
+                "reservas": 282000,
+                "consumo_planeado": 2260,
+                "consumo_real": 2260,
+                "bombeo_planeado": 2260,
+                "bombeo_real": 2260,
+                "produccion_planeada": 451,
+                "produccion_real": 451,
+                "produccion_acumulada": 33900,
+                "ganancias_anuales": 2030,
+                "ganancias_acumuladas": 167960,
+                "indice_ganancias": 38,
+                "indice_sustentabilidad": 76,
                 "indice_rendimiento": 57
             }
         },
         {
             "decision": {
                 "fraccion_bombeo": 100,
-                "produccion_planeada": 580,
+                "produccion_planeada": 381,
                 "condiciones_aplicadas": [
                     "reduccion_por_sobre_consumo",
                     "aumento_por_bajas_precipitaciones"
                 ],
                 "razon_recomendacion": [
-                    "Reducir el bombeo debido al sobre consumo del agua en superficie",
-                    "Aumento de bombeo por baja significativa en precipitaciones"
-                ]
-            },
-            "condiciones_aplicadas": [
-                "reduccion_por_sobre_consumo",
-                "aumento_por_bajas_precipitaciones"
-            ],
-            "resultado": {
-                "agua_superficie": 3510,
-                "precipitaciones": 2500,
-                "reservas": 263000,
-                "consumo_planeado": 2900,
-                "consumo_real": 2900,
-                "bombeo_planeado": 2900,
-                "bombeo_real": 2900,
-                "produccion_planeada": 580,
-                "produccion_real": 580,
-                "produccion_acumulada": 38400,
-                "ganancias_anuales": 2610,
-                "ganancias_acumuladas": 177140,
-                "indice_ganancias": 40,
-                "indice_sustentabilidad": 72,
-                "indice_rendimiento": 56
-            }
-        },
-        {
-            "decision": {
-                "fraccion_bombeo": 100,
-                "produccion_planeada": 580,
-                "condiciones_aplicadas": [
-                    "reduccion_por_sobre_consumo",
-                    "aumento_por_bajas_precipitaciones"
-                ],
-                "razon_recomendacion": [
-                    "Reducir el bombeo debido al sobre consumo del agua en superficie",
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
                     "Aumento de bombeo por baja significativa en precipitaciones"
                 ]
             },
@@ -2510,19 +1459,385 @@
             "resultado": {
                 "agua_superficie": 2840,
                 "precipitaciones": 2000,
-                "reservas": 249000,
-                "consumo_planeado": 2900,
-                "consumo_real": 2900,
-                "bombeo_planeado": 2900,
-                "bombeo_real": 2900,
-                "produccion_planeada": 580,
-                "produccion_real": 580,
-                "produccion_acumulada": 42200,
-                "ganancias_anuales": 2610,
-                "ganancias_acumuladas": 192800,
+                "reservas": 264000,
+                "consumo_planeado": 1910,
+                "consumo_real": 1910,
+                "bombeo_planeado": 1910,
+                "bombeo_real": 1910,
+                "produccion_planeada": 381,
+                "produccion_real": 381,
+                "produccion_acumulada": 38500,
+                "ganancias_anuales": 1710,
+                "ganancias_acumuladas": 176533,
+                "indice_ganancias": 38,
+                "indice_sustentabilidad": 74,
+                "indice_rendimiento": 56
+            }
+        }
+    ],
+    [
+        {
+            "valores_iniciales": {
+                "agua_superficie": 7000,
+                "precipitaciones": 7000,
+                "reservas": 354000,
+                "consumo_planeado": 2500,
+                "consumo_real": 2500,
+                "bombeo_planeado": 1250,
+                "bombeo_real": 1250,
+                "produccion_planeada": 500,
+                "produccion_real": 500,
+                "produccion_acumulada": 9500,
+                "ganancias_anuales": 2380,
+                "ganancias_acumuladas": 47500,
+                "indice_ganancias": 95,
+                "indice_sustentabilidad": 99,
+                "indice_rendimiento": 97
+            },
+            "decision": {
+                "fraccion_bombeo": 50,
+                "produccion_planeada": 500,
+                "condiciones_aplicadas": [],
+                "razon_recomendacion": []
+            },
+            "condiciones_aplicadas": [],
+            "resultado": {
+                "agua_superficie": 7000,
+                "precipitaciones": 6500,
+                "reservas": 353000,
+                "consumo_planeado": 2500,
+                "consumo_real": 2500,
+                "bombeo_planeado": 1250,
+                "bombeo_real": 1250,
+                "produccion_planeada": 500,
+                "produccion_real": 500,
+                "produccion_acumulada": 12000,
+                "ganancias_anuales": 2380,
+                "ganancias_acumuladas": 59375,
+                "indice_ganancias": 66,
+                "indice_sustentabilidad": 98,
+                "indice_rendimiento": 82
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 560,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 7000,
+                "precipitaciones": 6000,
+                "reservas": 350000,
+                "consumo_planeado": 2800,
+                "consumo_real": 2800,
+                "bombeo_planeado": 2800,
+                "bombeo_real": 2800,
+                "produccion_planeada": 560,
+                "produccion_real": 560,
+                "produccion_acumulada": 14700,
+                "ganancias_anuales": 2520,
+                "ganancias_acumuladas": 69455,
+                "indice_ganancias": 53,
+                "indice_sustentabilidad": 96,
+                "indice_rendimiento": 74
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 626.0,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
+            "resultado": {
+                "agua_superficie": 7000,
+                "precipitaciones": 5500,
+                "reservas": 341000,
+                "consumo_planeado": 3130,
+                "consumo_real": 3130,
+                "bombeo_planeado": 3130,
+                "bombeo_real": 3130,
+                "produccion_planeada": 626,
+                "produccion_real": 626,
+                "produccion_acumulada": 17800,
+                "ganancias_anuales": 2820,
+                "ganancias_acumuladas": 83243,
+                "indice_ganancias": 46,
+                "indice_sustentabilidad": 94,
+                "indice_rendimiento": 69
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 692.0,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajo_indice_ganancia",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de la produccion y fraccion de bombeo debido a excesiva bajada del indice de produccion",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajo_indice_ganancia",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
+            "resultado": {
+                "agua_superficie": 6820,
+                "precipitaciones": 5000,
+                "reservas": 330000,
+                "consumo_planeado": 3460,
+                "consumo_real": 3460,
+                "bombeo_planeado": 3460,
+                "bombeo_real": 3460,
+                "produccion_planeada": 692,
+                "produccion_real": 692,
+                "produccion_acumulada": 21200,
+                "ganancias_anuales": 3110,
+                "ganancias_acumuladas": 98516,
+                "indice_ganancias": 43,
+                "indice_sustentabilidad": 90,
+                "indice_rendimiento": 66
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 638.0,
+                "condiciones_aplicadas": [
+                    "reduccion_por_bajo_indice_susten",
+                    "aumento_por_bajas_precipitaciones",
+                    "aumento_por_altas_ganancias"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción por bajada excesiva del índice de sustentabilidad",
+                    "Aumento de bombeo por baja significativa en precipitaciones",
+                    "Aumento de producción debido a mejora significativa en ganancias anuales"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_bajo_indice_susten",
+                "aumento_por_bajas_precipitaciones",
+                "aumento_por_altas_ganancias"
+            ],
+            "resultado": {
+                "agua_superficie": 6180,
+                "precipitaciones": 4500,
+                "reservas": 318000,
+                "consumo_planeado": 3190,
+                "consumo_real": 3190,
+                "bombeo_planeado": 3190,
+                "bombeo_real": 3190,
+                "produccion_planeada": 638,
+                "produccion_real": 638,
+                "produccion_acumulada": 24400,
+                "ganancias_anuales": 2870,
+                "ganancias_acumuladas": 113114,
                 "indice_ganancias": 40,
-                "indice_sustentabilidad": 69,
-                "indice_rendimiento": 54
+                "indice_sustentabilidad": 87,
+                "indice_rendimiento": 63
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 638,
+                "condiciones_aplicadas": [
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 5510,
+                "precipitaciones": 4000,
+                "reservas": 307000,
+                "consumo_planeado": 3190,
+                "consumo_real": 3190,
+                "bombeo_planeado": 3190,
+                "bombeo_real": 3190,
+                "produccion_planeada": 638,
+                "produccion_real": 638,
+                "produccion_acumulada": 27600,
+                "ganancias_anuales": 2870,
+                "ganancias_acumuladas": 127469,
+                "indice_ganancias": 39,
+                "indice_sustentabilidad": 84,
+                "indice_rendimiento": 61
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 578,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 4840,
+                "precipitaciones": 3500,
+                "reservas": 296000,
+                "consumo_planeado": 2890,
+                "consumo_real": 2890,
+                "bombeo_planeado": 2890,
+                "bombeo_real": 2890,
+                "produccion_planeada": 578,
+                "produccion_real": 578,
+                "produccion_acumulada": 30600,
+                "ganancias_anuales": 2600,
+                "ganancias_acumuladas": 140744,
+                "indice_ganancias": 38,
+                "indice_sustentabilidad": 81,
+                "indice_rendimiento": 60
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 518,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 4180,
+                "precipitaciones": 3000,
+                "reservas": 286000,
+                "consumo_planeado": 2590,
+                "consumo_real": 2590,
+                "bombeo_planeado": 2590,
+                "bombeo_real": 2590,
+                "produccion_planeada": 518,
+                "produccion_real": 518,
+                "produccion_acumulada": 33200,
+                "ganancias_anuales": 2330,
+                "ganancias_acumuladas": 152669,
+                "indice_ganancias": 38,
+                "indice_sustentabilidad": 79,
+                "indice_rendimiento": 58
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 458,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 2510,
+                "precipitaciones": 2500,
+                "reservas": 276000,
+                "consumo_planeado": 2290,
+                "consumo_real": 2290,
+                "bombeo_planeado": 2290,
+                "bombeo_real": 2290,
+                "produccion_planeada": 458,
+                "produccion_real": 458,
+                "produccion_acumulada": 35600,
+                "ganancias_anuales": 2060,
+                "ganancias_acumuladas": 163244,
+                "indice_ganancias": 38,
+                "indice_sustentabilidad": 77,
+                "indice_rendimiento": 57
+            }
+        },
+        {
+            "decision": {
+                "fraccion_bombeo": 100,
+                "produccion_planeada": 398,
+                "condiciones_aplicadas": [
+                    "reduccion_por_sobre_consumo",
+                    "aumento_por_bajas_precipitaciones"
+                ],
+                "razon_recomendacion": [
+                    "Reducir la producción debido al sobre consumo del agua en superficie",
+                    "Aumento de bombeo por baja significativa en precipitaciones"
+                ]
+            },
+            "condiciones_aplicadas": [
+                "reduccion_por_sobre_consumo",
+                "aumento_por_bajas_precipitaciones"
+            ],
+            "resultado": {
+                "agua_superficie": 2840,
+                "precipitaciones": 2000,
+                "reservas": 267000,
+                "consumo_planeado": 1990,
+                "consumo_real": 1990,
+                "bombeo_planeado": 1990,
+                "bombeo_real": 1990,
+                "produccion_planeada": 398,
+                "produccion_real": 398,
+                "produccion_acumulada": 38000,
+                "ganancias_anuales": 1790,
+                "ganancias_acumuladas": 174260,
+                "indice_ganancias": 37,
+                "indice_sustentabilidad": 74,
+                "indice_rendimiento": 56
             }
         }
     ]

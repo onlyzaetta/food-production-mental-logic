@@ -20,8 +20,8 @@ class MotorLogico:
                 return json.load(f)
         ## Valores por defecto en caso de fallo al buscar y leer archivo
         return {
-            "reduccion_produccion_por_capacidad_produccion": 100,
-            "reduccion_produccion_por_capacidad_consumo": 100,
+            "reduccion_por_capacidad_produccion": 100,
+            "reduccion_por_capacidad_consumo": 100,
             "aumento_por_bajo_indice_ganancia": 100,
             "reduccion_por_bajo_indice_susten": 100,
             "reduccion_por_sobre_consumo": 100,
@@ -73,14 +73,14 @@ class MotorLogico:
                 self.recomendacionProduccion = prod_plan_actual
                 self.recomendacionBombeo = bombeo_agua_planeado
 
-
+            ##AJUSTE A LA RECOMENDACION
             # -producción planeada (PP) - producción real (PR) > 0 /or/ onsumo planeado (CP) - consumo real (CR) > 0
             if (prod_plan_actual - prod_real_actual > 0) or (bombeo_agua_planeado - bombeo_agua_real > 0):
                 self.recomendacionProduccion -= self.parametros["reduccion_por_capacidad_produccion"]
                 condiciones_aplicadas.append("reduccion_por_capacidad_produccion")
                 razon_recomendacion.append("Reducir la producción por que se sobrepasó la capacidad de produccion del terreno")
             
-            # Antes de comparar con rondas previas aseguremonos de que no estén vacias
+            # Antes de comparar con rondas previas nos aseguramos de que no estén vacias
             if anterior:
                 # -índice de ganancias disminuye más de un 3%
                 if (gan_prev - gan_actual > 3):
@@ -96,9 +96,9 @@ class MotorLogico:
                     razon_recomendacion.append("Reducir la producción por bajada excesiva del índice de sustentabilidad")
                 # -Agua en superficie disminuye más de un 10%
                 if (agua_prev - agua_actual > 0.10 * agua_prev):
-                    self.recomendacionBombeo -= self.parametros["reduccion_por_sobre_consumo"] /10
+                    self.recomendacionProduccion -= self.parametros["reduccion_por_sobre_consumo"]
                     condiciones_aplicadas.append("reduccion_por_sobre_consumo")
-                    razon_recomendacion.append("Reducir el bombeo debido al sobre consumo del agua en superficie")
+                    razon_recomendacion.append("Reducir la producción debido al sobre consumo del agua en superficie")
                 # Baja de precipitaciones mayor al 5%
                 if precipitaciones_prev > 0 and (precipitaciones_prev - precipitaciones_actual) / precipitaciones_prev > 0.05:
                     self.recomendacionBombeo += self.parametros.get("aumento_por_bajas_precipitaciones", 100) / 10
@@ -120,12 +120,6 @@ class MotorLogico:
         self.recomendacionBombeo = min(100, max(0, self.recomendacionBombeo))
         self.recomendacionProduccion = min(2000,max(0, self.recomendacionProduccion))
 
-        # Guardar experiencia con condiciones
-        self.memoria.guardar_experiencia(
-            entrada=estado,
-            decision=self.resultado,
-            resultado={}
-        )
 
         # Resultado final de la ronda
         self.resultado = {
@@ -135,4 +129,11 @@ class MotorLogico:
             "razon_recomendacion": razon_recomendacion
         }
 
+        # Guardar experiencia con condiciones
+        self.memoria.guardar_experiencia(
+            entrada=estado,
+            decision=self.resultado,
+            resultado={}
+        )
+        
         return self.resultado
